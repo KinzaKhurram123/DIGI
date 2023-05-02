@@ -1,0 +1,4 @@
+export default `<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1V1C5.55 1 3.625 2.9 3.625 5.31818V7.90909H12.375V5.31818C12.375 2.9 10.45 1 8 1V1Z" stroke="#092143" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 8.90909C1 8.3568 1.44772 7.90909 2 7.90909H14C14.5523 7.90909 15 8.3568 15 8.90909V16C15 16.5523 14.5523 17 14 17H2C1.44772 17 1 16.5523 1 16V8.90909Z" stroke="#092143" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`
