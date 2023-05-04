@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, Dimensions, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {styles} from './index.style';
@@ -7,6 +7,7 @@ import {images, SIZES} from '../../../Components/Constant';
 import {search_icon_gray} from '../../../assets/icons';
 import {FlatList} from 'react-native-gesture-handler';
 import Signup from '../../Register/Signup';
+import SingleMedicianView from '../../../Components/ImageView/SingleMedicianView';
 export default function MedicianA_Z({navigation}) {
   const ItemSeperatorView = () => <View style={{ height: SIZES.padding }} />;
 
@@ -121,12 +122,31 @@ export default function MedicianA_Z({navigation}) {
                           numColumns={2}
                           showsVerticalScrollIndicator={false}
                           ItemSeparatorComponent={ItemSeperatorView}
-                        //   renderItem={({item}) =>(
-
-                            
-                        //   )
-                        
-                        // }
+                      renderItem={({item}) =>(
+                        <SingleMedicianView 
+                        style={{
+                          width: Dimensions.get("screen").width / 2.5,
+                          marginHorizontal: SIZES.padding2,
+                          borderRadius: SIZES.padding2,
+                          shadowColor: 'rgba(170, 33, 33, 0.6)',
+                          shadowOffset: {
+                            width: 0,
+                            height: 2,
+                          },
+                          shadowOpacity: 0.23,
+                          shadowRadius: 2.62,
+                          elevation: 4,
+                        }}
+                        imageStyle={{
+                          borderTopLeftRadius: SIZES.padding2,
+                          borderTopRightRadius: SIZES.padding2
+                        }}
+                        title={item.title}
+                        description={item.description}
+                        imag={item.image}
+                        price={item.price}
+                        />
+                      )}
                       />
                     </View>
                   </View>
