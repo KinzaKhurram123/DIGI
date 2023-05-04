@@ -66,7 +66,7 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'OTC and Health Need',
-      goto: () => props.navigation.navigate('Carees'),
+      goto: () => navigation.navigate('OTC'),
     },
     {
       title: 'Food and Beverages',

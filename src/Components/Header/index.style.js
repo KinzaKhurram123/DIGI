@@ -1,5 +1,4 @@
 import { Dimensions, StyleSheet } from "react-native";
-import Signup from "../../Screens/Register/Signup";
 import { COLORS, FONTS, SIZES } from "../Constant";
 
 export const styles = StyleSheet.create({
@@ -8,9 +7,6 @@ export const styles = StyleSheet.create({
     paddingTop: SIZES.padding * 2.5,
     paddingBottom: SIZES.padding * 1.3,
     paddingHorizontal: SIZES.padding,
-    borderBottomEndRadius: SIZES.padding,
-    borderBottomStartRadius: SIZES.padding
-
   },
   sub_view: {
     alignItems: "center",
@@ -18,9 +14,10 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   title: {
-    ...FONTS.Regular25,
+    ...FONTS.Regular18,
     color: COLORS.text_white,
     marginLeft: SIZES.padding2,
+    textAlign: "left",
   },
   image:{
     width:35,

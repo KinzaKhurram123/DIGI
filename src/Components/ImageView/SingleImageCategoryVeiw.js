@@ -10,7 +10,7 @@ const SingleImageCategoryVeiw = ({onPress,name, style, image}) => {
         <Image source={image} style={{width:"100%" , height: "100%"}} />
       </View>
       <View style={styles.text_view}>
-        <Text style={styles.title}>text={name}</Text>
+        <Text style={styles.title}>{name}</Text>
       </View>
     </TouchableOpacity>
   );

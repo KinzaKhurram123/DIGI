@@ -1,6 +1,5 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import React from 'react';
-import {Image} from 'react-native-svg';
 import { COLORS, SIZES } from '../Constant';
 
 const SingleOtcView = ({image, onpress , name , price}) => {
@@ -9,8 +8,8 @@ const SingleOtcView = ({image, onpress , name , price}) => {
       <View style={styles.image_view}>
         <Image style={styles.image} source={image} />
       </View>
-      <Text style={styles.name} text={name}/>
-      <Text style={styles.price} text={"Rs" + price}/>
+      <Text style={styles.name} >{name}</Text>
+      <Text style={styles.price}>{"Rs" + price}</Text>
     </TouchableOpacity>
   );
 };

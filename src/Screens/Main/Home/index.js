@@ -102,6 +102,7 @@ export default function Home({navigation}) {
         isDrawer={true}
         isHome={true}
         hasSearchBar={true}
+        onPressSearchBar={navigation.navigate('heloo')}
       />
       <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>
         <View style={styles.main_view}>
@@ -109,7 +110,7 @@ export default function Home({navigation}) {
             <TouchableOpacity style={styles.btn} onPress={()=> navigation.navigate('MedicianA_Z')}>
               <Text>Medician A-Z</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Medician_systemic')}>
               <Text>Medicine by Systemic Class</Text>
             </TouchableOpacity>
           </View>
@@ -149,14 +150,14 @@ export default function Home({navigation}) {
         <FlatList
           style={styles.flatlist}
           horizontal
-          data={categories}
+          data={categoriess}
           keyExtractor={item => item?.id}
           showsHorizontalScrollIndicator={false}
           renderItem={({item}) => {
             return (
               <SingleCategoryView
-                image={item}
-                name={'item?.name'}
+                image={item.image}
+                name={item.name}
                 onPress={() => {
                   navigation.navigate('Home', {
                     data: {categoryId: item?.id},

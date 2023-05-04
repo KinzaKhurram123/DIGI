@@ -1,20 +1,18 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import {styles} from './index.style';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-import {Icon, IconInputField} from '../index';
+import {useNavigation} from '@react-navigation/native';
+import {Image, TouchableOpacity, View} from 'react-native';
 import {
   back_arrow_icon,
   close_black_icon,
   menu_icon_white,
   notification_icon,
-  search_icon,
   search_icon_blue,
   top_right_icon,
 } from '../../assets/icons';
-import {images, SIZES} from '../Constant';
-import {Image} from 'react-native-svg';
-const CommonHeader = ({
+import {images, SIZES} from '../../Components/Constant';
+import {Icons, Text, IconInputField} from '../index';
+import {styles} from './index.style';
+
+const Header = ({
   title,
   onPressIcon,
   isDrawer = false,
@@ -33,26 +31,28 @@ const CommonHeader = ({
   onPressCross,
   searchValue,
 }) => {
+  const navigation = useNavigation();
   return (
     <View style={[styles.main_view, style]}>
       <View style={styles.sub_view}>
         <TouchableOpacity onPress={onPressIcon}>
           {isBackIcon && (
-            <Icon name={isDrawer ? menu_icon_white : back_arrow_icon} />
+            <Icons name={isDrawer ? menu_icon_white : back_arrow_icon} />
           )}
         </TouchableOpacity>
         <View style={{flex: 1}}>
-          <Text style={[styles.title, titleStyle]}>{title}</Text>
+          <Text style={[styles.title, titleStyle]} text={title} />
         </View>
+
         {isIcon && (
           <>
-            <TouchableOpacity onpress={onPressNotification}>
-              <Icon name={notification_icon} />
+            <TouchableOpacity onPress={onPressNotification}>
+              <Icons name={notification_icon} />
             </TouchableOpacity>
             <TouchableOpacity
               style={{marginLeft: SIZES.padding}}
-              onpress={() => navigation.navigate('myCart')}>
-              <Icon name={top_right_icon} />
+              onPress={() => navigation.navigate('store')}>
+              <Icons name={top_right_icon} />
             </TouchableOpacity>
             {isHome && (
               <TouchableOpacity
@@ -61,7 +61,7 @@ const CommonHeader = ({
                 <Image
                   source={images.profile_image}
                   style={styles.image}
-                  resizeMode={'contain'}
+                  resizeMode="contain"
                 />
               </TouchableOpacity>
             )}
@@ -77,12 +77,11 @@ const CommonHeader = ({
             value={searchValue}
             onPressRightIcon={onPressCross}
             onChangeText={text => onChangeText(text)}
-            placeholder="what are you looking for?"
+            placeholder="What are you looking for?"
           />
         </TouchableOpacity>
       )}
     </View>
   );
 };
-
-export default CommonHeader;
+export default Header;
