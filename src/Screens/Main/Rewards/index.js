@@ -52,15 +52,31 @@ const Rewards = ({navigation}) => {
           50 Points expiring on May 22 2022
         </Text>
         <View style={styles.tab_row}>
-          <TouchableOpacity style={[styles.tab_view ,{
+          <TouchableOpacity style={[
+            styles.tab_view, {
               borderBottomColor: toggleTabs === 'Reward Wallet' ? COLORS.secondary : COLORS.border_grey
-            }]} onPress={() => setToggleTabs('Reward Wallet')}>
-              <Text   style={[styles.tab_text , {
+            }
+          ]} onPress={() => setToggleTabs('Reward Wallet')}>
+            <Text
+              style={[styles.tab_text , {
+                color:toggleTabs === 'Reward Wallet' ? COLORS.primary : COLORS.text_placeholder
+              }]}
+
+            >Reward Wallet</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={[
+            styles.tab_view, {
+              borderBottomColor: toggleTabs === 'Transactions' ? COLORS.secondary : COLORS.border_grey
+            }
+          ]} onPress={() => setToggleTabs('Transactions')}>
+            <Text
+               style={[styles.tab_text , {
                 color:toggleTabs === 'Transactions' ? COLORS.primary : COLORS.text_placeholder
-              }]}>
-                Transactions
-              </Text>
-            </TouchableOpacity>
+              }]}
+           
+            >Transactions</Text>
+          </TouchableOpacity>
         </View>
         <FlatList
         data={rewards}

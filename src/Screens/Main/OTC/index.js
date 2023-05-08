@@ -1,5 +1,5 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
 import {styles} from './index.style';
 import {CommonHeader, Icon} from '../../../Components';
 import SingleCardImageView from '../../../Components/ImageView/SingleImageCardView';
@@ -7,8 +7,46 @@ import {images, SIZES} from '../../../Components/Constant';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {add_round_icon, substract_round_icon} from '../../../assets/icons';
 import Buttons from '../../../Components/Buttons/buttons';
+import {ImagePicker} from 'react-native-image-picker';
 
-const OTC = ({navigation}) => {
+const OTC = ({navigation , props}) => {
+  // constructor(props)  {
+  //   super(props);
+  //   this.state = {
+  //     resourcePath: {},
+  //   };
+  // };
+  // selectFile = () => {
+  //   var options = {
+  //     title: 'Select Image',
+  //     customButtons: [
+  //       { 
+  //         name: 'customOptionKey', 
+  //         title: 'Choose file from Custom Option' 
+  //       },
+  //     ],
+  //     storageOptions: {
+  //       skipBackup: true,
+  //       path: 'images',
+  //     },
+  //   };
+  //   ImagePicker.showImagePicker(options, res => {
+  //     console.log('Response = ', res);
+  //     if (res.didCancel) {
+  //       console.log('User cancelled image picker');
+  //     } else if (res.error) {
+  //       console.log('ImagePicker Error: ', res.error);
+  //     } else if (res.customButton) {
+  //       console.log('User tapped custom button: ', res.customButton);
+  //       alert(res.customButton);
+  //     } else {
+  //       let source = res;
+  //       this.setState({
+  //         resourcePath: source,
+  //       });
+  //     }
+  //   });
+  // };
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
@@ -52,20 +90,35 @@ const OTC = ({navigation}) => {
             </View>
           </View>
         </View>
+        {/* <Image
+          source={{
+            uri: 'data:image/jpeg;base64,' + this.state.resourcePath.data,
+          }}
+          style={{width: 100, height: 100}}
+        />
+        <Image
+          source={{uri: this.state.resourcePath.uri}}
+          style={{width: 200, height: 200}}
+        />
+        <Text style={{alignItems: 'center'}}>
+          {this.state.resourcePath.uri}
+        </Text>
+        <TouchableOpacity onPress={this.selectFile} style={styles.button}>
+          <Text style={styles.buttonText}>Select File</Text>
+        </TouchableOpacity> */}
         <Buttons
           onPress={() => setShowImageModal(true)}
           buttonText={'Upload Prescription'}
           style={styles.btn}
         />
         <View style={styles.text_row}>
-          <Text style={styles.desc} >Don’t have a prescription,</Text>
+          <Text style={styles.desc}>Don’t have a prescription,</Text>
           <TouchableOpacity onPress={() => setShowHelpModal(true)}>
-            <Text style={styles.help_text} >need help</Text>
+            <Text style={styles.help_text}>need help</Text>
           </TouchableOpacity>
-          <Text style={styles.desc}  >.</Text>
+          <Text style={styles.desc}>.</Text>
         </View>
       </View>
-      
     </SafeAreaView>
   );
 };

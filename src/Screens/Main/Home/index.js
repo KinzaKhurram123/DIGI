@@ -78,7 +78,7 @@ export default function Home({navigation}) {
       id: 1,
       image: images.medicine_paracetamol,
       name: 'Paracetamol',
-      price: '500',
+      price: '500',  price: '500',
     },
     {
       id: 2,
@@ -87,12 +87,6 @@ export default function Home({navigation}) {
       price: '500',
     },
   ];
-  // const Data = ({item}) => (
-  //   <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center'}}>
-  //     <Image src={item.image} style={styles.image_card} />
-  //     <Text>{item.title}</Text>
-  //   </View>
-  // );
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
@@ -102,7 +96,7 @@ export default function Home({navigation}) {
         isDrawer={true}
         isHome={true}
         hasSearchBar={true}
-        onPressSearchBar={navigation.navigate('heloo')}
+        // onPressSearchBar={navigation.navigate('Search')}
       />
       <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>
         <View style={styles.main_view}>
@@ -180,6 +174,7 @@ export default function Home({navigation}) {
               <SingleOtcView
                 name={item.name}
                 price={item.price}
+                navigate={()=> navigation.navigate('OTC')}
                 image={item.image}
                 keyExtractor={item => item?.id}
                 onPress={() => {

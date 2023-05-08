@@ -2,33 +2,21 @@ import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {styles} from './index.style';
 import {ScrollView} from 'react-native-gesture-handler';
-import {CommonHeader, IconInputField} from '../../../Components';
+import {CommonHeader, IconInputField} from '../../Components';
 import {edit_icon} from '../../../assets/icons';
-import {SIZES} from '../../../Components/Constant';
+import {SIZES} from '../../Components/Constant';
 import SingleOrderView from './Components/SingleOrderView';
-import Buttons from '../../../Components/Buttons/buttons';
+import Buttons from '../../Components/Buttons/buttons';
 
-const History = () => {
+const MyOrder= ({navigation}) => {
   const [name, setName] = useState(null);
   const [address, setAddress] = useState(null);
 
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader title={'History'} onPressIcon={() => navigation.goBack()} />
+      <CommonHeader title={'My Order'} onPressIcon={() => navigation.goBack()} />
       <View style={styles.main_view}>
         <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
-          <IconInputField
-            value={name}
-            placeholder={'Name'}
-            rightIcon={edit_icon}
-            onChangeText={text => setName(text)}
-          />
-          <IconInputField
-            rightIcon={edit_icon}
-            value={address}
-            onChangeText={text => setAddress(text)}
-            placeholder="Address"
-          />
           <View style={{height: SIZES.padding * 1.5}} />
 
           <Text style={styles.number}>Mobile Number</Text>
@@ -75,4 +63,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default MyOrder;

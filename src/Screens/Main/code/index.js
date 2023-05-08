@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
 import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
-import BackButton from '../../Components/MainHeader/index.js';
-import Container from '../../Components/Container/Container';
-import InnerContainer from '../../Components/Container/InnerContainer';
+import BackButton from '../../../Components/MainHeader/index.js.js';
+import Container from '../../../Components/Container/Container';
+import InnerContainer from '../../../Components/Container/InnerContainer';
 import {
   CodeField,
   Cursor,
@@ -12,11 +12,11 @@ import {
   MaskSymbol,
   isLastFilledCell,
 } from 'react-native-confirmation-code-field';
-import {COLORS, FONTS, SIZES} from '../../Components/Constant';
+import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
 import {ScrollView} from 'react-native-gesture-handler';
-import {back_arrow_icon, views_icon} from '../../assets/icons';
-import Buttons from '../../Components/Buttons/buttons';
-import { Icon } from '../../Components';
+import {back_arrow_icon, views_icon} from '../../../assets/icons';
+import Buttons from '../../../Components/Buttons/buttons';
+import { Icon } from '../../../Components';
 const CELL_COUNT = 4;
 
 export default function Otp({navigation}) {

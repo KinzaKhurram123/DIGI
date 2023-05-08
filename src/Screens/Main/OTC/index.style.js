@@ -5,6 +5,20 @@ export const styles = StyleSheet.create({
   safe_area: {
     flex: 1,
   },
+  button: {
+    width: 250,
+    height: 60,
+    backgroundColor: '#3740ff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 4,
+    marginBottom:12    
+  },
+  buttonText: {
+    textAlign: 'center',
+    fontSize: 15,
+    color: '#fff'
+  },
   main_view: {
     flex: 1,
     paddingHorizontal: SIZES.padding,

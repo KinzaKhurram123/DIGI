@@ -27,12 +27,16 @@ const CustomDrawer = ({navigation}) => {
       goto: () => navigation.navigate('History'),
     },
     {
+      title: 'About',
+      goto: () => navigation.navigate('About'),
+    },
+    {
       title: 'Our Store',
       goto: () => navigation.navigate('OurStore'),
     },
     {
       title: 'Profile',
-      goto: () => navigation.navigate('profile'),
+      goto: () => navigation.navigate('Profile'),
     },
     {
       title: 'Carees',
@@ -43,26 +47,26 @@ const CustomDrawer = ({navigation}) => {
       goto: () => navigation.navigate('Blog'),
     },
     {
-      title: 'Carees',
-      goto: () => navigation.navigate('profile'),
+      title: 'My Order',
+      goto: () => navigation.navigate('MyOrder'),
     },
     {
-      title: 'Contact Us',
-      goto: () => props.navigation.navigate('Contactus'),
+      title: 'Notification',
+      goto: () => navigation.navigate('Notification'),
     },
   ];
   const Categories = [
     {
       title: 'Medician',
-      goto: () => props.navigation.navigate('Medician'),
+      goto: () => navigation.navigate('Category'),
     },
     {
       title: 'Baby and Mother Care',
-      goto: () => props.navigation.navigate('Care'),
+      goto: () => props.navigation.navigate('Category'),
     },
     {
       title: 'Personal Care',
-      goto: () => props.navigation.navigate('personalcare'),
+      goto: () => props.navigation.navigate('Category'),
     },
     {
       title: 'OTC and Health Need',
@@ -86,17 +90,17 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'Medician A-Z',
-      goto: () => props.navigation.navigate('Medician'),
+      goto: () => navigation.navigate('MedicianA_Z'),
     },
   ];
   const Supports = [
     {
       title: 'FAQS',
-      goto: () => props.navigation.navigate('FAQS'),
+      goto: () => navigation.navigate('FAQS'),
     },
     {
       title: 'Card Discounts',
-      goto: () => props.navigation.navigate('Discounts'),
+      goto: () => navigation.navigate('CardDiscount'),
     },
     {
       title: 'Privacy Policy',

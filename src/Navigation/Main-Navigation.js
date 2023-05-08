@@ -11,6 +11,12 @@ import News from '../Screens/Main/News';
 import OTC from '../Screens/Main/OTC';
 import OurStore from '../Screens/Main/OurStore';
 import Rewards from '../Screens/Main/Rewards';
+import CardDiscount from '../Screens/Main/CardDiscount';
+import FAQS from '../Screens/Main/FAQS';
+import Profile from '../Screens/Main/Profile';
+import MyOrder from '../Screens/MyOrder';
+import Notification from '../Screens/Main/Notification';
+import Category from '../Screens/Main/Category';
 const Drawer = createDrawerNavigator();
 
 export const Main = ({focused}) => {
@@ -21,7 +27,7 @@ export const Main = ({focused}) => {
         headerShown: false,
         drawerStyle: {
           backgroundColor: '#12376B',
-          width: '75%',
+          width: '75%',  
         },  
       }}
       drawerContent={(props) => <CustomDrawer {...props} {...focused} />}
@@ -33,7 +39,12 @@ export const Main = ({focused}) => {
       <Drawer.Screen name="News" component={News} />
       <Drawer.Screen name="OTC" component={OTC} />
       <Drawer.Screen name="History" component={History} />
-
+      <Drawer.Screen name="CardDiscount" component={CardDiscount} />
+      <Drawer.Screen name="FAQS" component={FAQS} />
+      <Drawer.Screen name="Profile" component={Profile} />
+      <Drawer.Screen name="MyOrder" component={MyOrder} />
+      <Drawer.Screen name="Notification" component={Notification} />
+      <Drawer.Screen name="Category" component={Category} />
     </Drawer.Navigator>
   );
 };

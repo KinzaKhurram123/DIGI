@@ -6,7 +6,7 @@ import {CommonHeader, IconInputField} from '../../../Components';
 import {images, SIZES} from '../../../Components/Constant';
 import {search_icon_gray} from '../../../assets/icons';
 import {FlatList} from 'react-native-gesture-handler';
-import Signup from '../../Register/Signup';
+import Signup from '../Signup';
 export default function MedicianA_Z({navigation}) {
   const ItemSeperatorView = () => <View style={{ height: SIZES.padding }} />;
 
@@ -121,12 +121,10 @@ export default function MedicianA_Z({navigation}) {
                           numColumns={2}
                           showsVerticalScrollIndicator={false}
                           ItemSeparatorComponent={ItemSeperatorView}
-                        //   renderItem={({item}) =>(
+                            // renderItem={({item}) =>(
 
-                            
-                        //   )
-                        
-                        // }
+                              
+                            // )}
                       />
                     </View>
                   </View>

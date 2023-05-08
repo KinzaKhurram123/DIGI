@@ -1,5 +1,5 @@
 import { Dimensions, StyleSheet } from "react-native";
-import Signup from "../../Screens/Register/Signup";
+import Signup from "../../Screens/Main/Signup";
 import { COLORS, FONTS, SIZES } from "../Constant";
 
 export const styles = StyleSheet.create({

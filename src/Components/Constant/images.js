@@ -1,6 +1,6 @@
 import logo from "../../assets/images/logo.png";
 import black_logo from "../../assets/images/black_logo.png";
-import splash_background from "../../assets/images/splash_background.png";
+import splash_background from "../../assets/images/splash.png";
 import background_image from "../../assets/images/background_image.jpg";
 import medicine from "../../assets/images/medicine.jpg";
 import splash_screen from "../../assets/images/1.png";
@@ -42,8 +42,10 @@ import map_image from "../../assets/images/map_image.png";
 import order_left_image from "../../assets/images/order_left_image.png";
 import order_right_image from "../../assets/images/order_right_image.png";
 import no_image from "../../assets/images/no_image.png";
+import profile from "../../assets/images/profile.png";
 
 export default {
+  profile,
   logo,
   splash_screen,
   black_logo,

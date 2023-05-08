@@ -2,11 +2,11 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SvgXml} from 'react-native-svg';
-import {call_icon} from '../../assets/icons';
-import Buttons from '../../Components/Buttons/buttons';
-import {COLORS, SIZES} from '../../Components/Constant';
-import Container from '../../Components/Container/Container';
-import Logo from '../../Components/ImageView/logo';
+import {call_icon} from '../../../assets/icons';
+import Buttons from '../../../Components/Buttons/buttons';
+import {COLORS, SIZES} from '../../../Components/Constant';
+import Container from '../../../Components/Container/Container';
+import Logo from '../../../Components/ImageView/logo';
 
 export default function Start({navigation}) {
   return (

@@ -1,8 +1,8 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import {COLORS, FONTS, SIZES} from '../../../../Components/Constant';
+import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
 import {Text} from 'react-native-svg';
-import Buttons from '../../../../Components/Buttons/buttons';
+import Buttons from '../../../Components/Buttons/buttons';
 
 const SingleOrderView = ({
   status,

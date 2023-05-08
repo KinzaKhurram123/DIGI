@@ -1,13 +1,13 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
-import Anotherbackground from '../../Components/Header-Bar/background'
-import { images } from '../../Components/Constant'
+import Anotherbackground from '../../../Components/Header-Bar/background'
+import { images } from '../../../Components/Constant'
 const Splash = ({navigation}) => {
     setTimeout(() =>{
         navigation.navigate('Start')
        }, 5000 )
   return (
-     <View style={styles.Splash}>
+     <View>
       <Image source={images.splash_background}/>
      </View>
   )
@@ -15,7 +15,8 @@ const Splash = ({navigation}) => {
 export default Splash
 
 const styles = StyleSheet.create({
-Splash:{
-  flex : 1,
-}
+// Splash:{
+//   flex : 1,
+//   width: '100%'
+// }
 })

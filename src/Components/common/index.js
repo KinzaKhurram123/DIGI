@@ -6,6 +6,7 @@ import {Icon, IconInputField} from '../index';
 import {
   back_arrow_icon,
   close_black_icon,
+  edit_icon,
   menu_icon_white,
   notification_icon,
   search_icon,
@@ -15,6 +16,7 @@ import {
 import {images, SIZES} from '../Constant';
 import {Image} from 'react-native-svg';
 const CommonHeader = ({
+  navigation,
   title,
   onPressIcon,
   isDrawer = false,
@@ -32,6 +34,7 @@ const CommonHeader = ({
   isSearchable = false,
   onPressCross,
   searchValue,
+  edit,
 }) => {
   return (
     <View style={[styles.main_view, style]}>
@@ -44,6 +47,11 @@ const CommonHeader = ({
         <View style={{flex: 1}}>
           <Text style={[styles.title, titleStyle]}>{title}</Text>
         </View>
+        {edit && (
+          <TouchableOpacity>
+            <Icon name={edit_icon} />
+          </TouchableOpacity>
+        )}
         {isIcon && (
           <>
             <TouchableOpacity onpress={onPressNotification}>
@@ -51,7 +59,7 @@ const CommonHeader = ({
             </TouchableOpacity>
             <TouchableOpacity
               style={{marginLeft: SIZES.padding}}
-              onpress={() => navigation.navigate('myCart')}>
+              onpress={() => navigation.navigate('MyCart')}>
               <Icon name={top_right_icon} />
             </TouchableOpacity>
             {isHome && (
@@ -68,6 +76,7 @@ const CommonHeader = ({
           </>
         )}
       </View>
+
       {hasSearchBar && (
         <TouchableOpacity onPress={onPressSearchBar} disabled={isSearchable}>
           <IconInputField
