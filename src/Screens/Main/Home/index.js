@@ -78,7 +78,8 @@ export default function Home({navigation}) {
       id: 1,
       image: images.medicine_paracetamol,
       name: 'Paracetamol',
-      price: '500',  price: '500',
+      price: '500',
+      price: '500',
     },
     {
       id: 2,
@@ -101,10 +102,14 @@ export default function Home({navigation}) {
       <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>
         <View style={styles.main_view}>
           <View style={styles.container}>
-            <TouchableOpacity style={styles.btn} onPress={()=> navigation.navigate('MedicianA_Z')}>
+            <TouchableOpacity
+              style={styles.btn}
+              onPress={() => navigation.navigate('MedicianA_Z')}>
               <Text>Medician A-Z</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Medician_systemic')}>
+            <TouchableOpacity
+              style={styles.btn}
+              onPress={() => navigation.navigate('Medician_systemic')}>
               <Text>Medicine by Systemic Class</Text>
             </TouchableOpacity>
           </View>
@@ -153,9 +158,7 @@ export default function Home({navigation}) {
                 image={item.image}
                 name={item.name}
                 onPress={() => {
-                  navigation.navigate('Home', {
-                    data: {categoryId: item?.id},
-                  });
+                  navigation.navigate('OrderPlaced');
                 }}
               />
             );
@@ -174,12 +177,12 @@ export default function Home({navigation}) {
               <SingleOtcView
                 name={item.name}
                 price={item.price}
-                navigate={()=> navigation.navigate('OTC')}
+                navigate={() => navigation.navigate('OTC')}
                 image={item.image}
                 keyExtractor={item => item?.id}
                 onPress={() => {
-                  dispatch({ type: "SET_PRESCRIPTION", payload: true });
-                  navigation.navigate("ViewProduct", { data: item });
+                  dispatch({type: 'SET_PRESCRIPTION', payload: true});
+                  navigation.navigate('ViewProduct', {data: item});
                 }}
               />
             );

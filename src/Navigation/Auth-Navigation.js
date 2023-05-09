@@ -11,6 +11,7 @@ import Splash from '../Screens/Main/Splash';
 import start from '../Screens/Main/Start';
 import { View } from 'react-native/types';
 import ViewProduct from '../Screens/ViewProducts';
+import OrderPlaced from '../Screens/Main/OrderPlaced';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ function RegisterStack() {
       <Stack.Screen name='Mycart' component={MyCart}/>
       <Stack.Screen name="Search" component={Search} />
       <Stack.Screen name="ViewProduct" component={ViewProduct} />
+      <Stack.Screen name="OrderPlaced" component={OrderPlaced} />
 
 
 

@@ -38,7 +38,7 @@ const ViewProduct = ({navigation}) => {
 
           <Text style={styles.tags}>Tags ABC,ACD</Text>
           <Buttons
-          onPress={() => navigation.navigate('My Cart')}
+          onPress={() => navigation.navigate('Mycart')}
           buttonText={'Add to Cart'}
           style={styles.cart_btn}
         />
