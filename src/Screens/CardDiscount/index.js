@@ -1,10 +1,10 @@
 import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {styles} from './index.style';
-import {CommonHeader, Icon} from '../../../Components';
+import {CommonHeader, Icon} from '../../Components';
 import { FlatList } from 'react-native-gesture-handler';
-import { SIZES } from '../../../Components/Constant';
-import { bank_icon, grey_forward_icon } from '../../../assets/icons';
+import { SIZES } from '../../Components/Constant';
+import { bank_icon, grey_forward_icon } from '../../assets/icons';
 
 
 const card_discounts = [

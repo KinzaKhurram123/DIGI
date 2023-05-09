@@ -74,7 +74,7 @@ const SingleOrderView = ({
         </View>
         <View>
           <Text style={styles.key}> {'qty'} </Text>
-          <Text style={styles.value}> {quantity} </Text>
+          <Text style={styles.value}>{quantity} </Text>
         </View>
         <Buttons
           style={styles.btn}

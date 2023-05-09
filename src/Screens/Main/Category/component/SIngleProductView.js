@@ -7,7 +7,7 @@ import { white_add_icon } from '../../../../assets/icons';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import CardView from '../../../../Components/ImageView/CardView';
 
-const SIngleProductView = ({image, onPress,navigate, onPressAdd, name , price}) => {
+const SIngleProductView = ({image2, onPress,navigate, onPressAdd, name , price}) => {
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -26,10 +26,10 @@ const SIngleProductView = ({image, onPress,navigate, onPressAdd, name , price}) 
           },
         }}
         >
-          <CardView onPress={navigate}/>
+        <CardView onPress={navigate}/>
         </RBSheet>
       <View style={styles.image_view}>
-        <Image style={styles.image} source={image} />
+        <Image style={styles.image} source={image2} />
       </View>
       <View style={{paddingHorizontal: SIZES.padding * 0.2}}>
         <Text style={styles.name}>{name}</Text>

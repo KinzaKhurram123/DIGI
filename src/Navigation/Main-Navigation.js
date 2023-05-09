@@ -11,12 +11,13 @@ import News from '../Screens/Main/News';
 import OTC from '../Screens/Main/OTC';
 import OurStore from '../Screens/Main/OurStore';
 import Rewards from '../Screens/Main/Rewards';
-import CardDiscount from '../Screens/Main/CardDiscount';
+import CardDiscount from '../Screens/CardDiscount';
 import FAQS from '../Screens/Main/FAQS';
 import Profile from '../Screens/Main/Profile';
 import MyOrder from '../Screens/MyOrder';
 import Notification from '../Screens/Main/Notification';
 import Category from '../Screens/Main/Category';
+import MyCart from '../Screens/Main/MyCart';
 const Drawer = createDrawerNavigator();
 
 export const Main = ({focused}) => {
@@ -45,6 +46,8 @@ export const Main = ({focused}) => {
       <Drawer.Screen name="MyOrder" component={MyOrder} />
       <Drawer.Screen name="Notification" component={Notification} />
       <Drawer.Screen name="Category" component={Category} />
+      <Drawer.Screen name="MyCart" component={MyCart} />
+
     </Drawer.Navigator>
   );
 };

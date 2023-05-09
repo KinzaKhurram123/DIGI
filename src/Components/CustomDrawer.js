@@ -40,7 +40,7 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'Carees',
-      goto: () => navigation.navigate('Carees'),
+      goto: () => navigation.navigate('MyCart'),
     },
     {
       title: 'Blog',
@@ -74,7 +74,7 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'Food and Beverages',
-      goto: () => props.navigation.navigate('Beverages'),
+      goto: () => navigation.navigate('ViewProduct'),
     },
     {
       title: 'Nutrition and Supplements',

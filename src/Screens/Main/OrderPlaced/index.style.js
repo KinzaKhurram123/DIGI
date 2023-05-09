@@ -77,6 +77,7 @@ export const styles = StyleSheet.create({
     },
     total_text: {
         ...FONTS.Regular14,
+        color:COLORS.primary
     },
     text_price: {
         ...FONTS.Bold14,

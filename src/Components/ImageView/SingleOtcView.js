@@ -13,7 +13,7 @@ const SingleOtcView = ({image, onpress, name, price,navigate}) => {
         ref={ref => {
           this.RBSheet = ref;
         }}
-        height={400}
+        height={500}
         openDuration={250}
         customStyles={{
           container: {

@@ -4,12 +4,13 @@ import {CommonHeader} from '../../../Components';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {styles} from './index.style';
 import {ScrollView} from 'react-native-gesture-handler';
-import {images} from '../../../Components/Constant';
+import {images, SIZES} from '../../../Components/Constant';
+import Buttons from '../../../Components/Buttons/buttons';
 
 const Profile = ({navigation}) => {
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader title={'Profile'} isIcon={false} edit={true} />
+      <CommonHeader title={'Profile'} isIcon={false} edit={true} onPressIcon={()=> navigation.goBack()} onpressEdit={() => navigation.navigate('EditProfile')} />
       <View style={styles.main_view}>
         <ScrollView showsHorizontalScrollIndicator={false}>
           <View style={styles.profile}>
@@ -36,7 +37,10 @@ const Profile = ({navigation}) => {
             <Text>Adress 
             </Text>
             <Text>Suit No 123, San Francisco, CA </Text>
+            
           </View>
+          <Buttons  onPress={()=> navigation.navigate('EditProfile')} buttonText={'Edit Profile'} style={styles.btn}/>
+          <View style={{height:SIZES.padding}}/>
         </ScrollView>
       </View>
     </SafeAreaView>

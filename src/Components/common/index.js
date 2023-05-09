@@ -35,6 +35,7 @@ const CommonHeader = ({
   onPressCross,
   searchValue,
   edit,
+  onpressEdit
 }) => {
   return (
     <View style={[styles.main_view, style]}>
@@ -48,7 +49,7 @@ const CommonHeader = ({
           <Text style={[styles.title, titleStyle]}>{title}</Text>
         </View>
         {edit && (
-          <TouchableOpacity>
+          <TouchableOpacity onpress={onpressEdit}>
             <Icon name={edit_icon} />
           </TouchableOpacity>
         )}

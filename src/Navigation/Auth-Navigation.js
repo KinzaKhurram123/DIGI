@@ -12,6 +12,10 @@ import start from '../Screens/Main/Start';
 import { View } from 'react-native/types';
 import ViewProduct from '../Screens/ViewProducts';
 import OrderPlaced from '../Screens/Main/OrderPlaced';
+import SelectLOcation from '../Screens/SelectLocation';
+import Location from '../Screens/Location';
+import Payment from '../Screens/Payment';
+import EditProfile from '../Screens/Main/EditProfile';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,9 +36,10 @@ function RegisterStack() {
       <Stack.Screen name="Search" component={Search} />
       <Stack.Screen name="ViewProduct" component={ViewProduct} />
       <Stack.Screen name="OrderPlaced" component={OrderPlaced} />
-
-
-
+      <Stack.Screen name="SelectLocation" component={SelectLOcation} />
+      <Stack.Screen name="Location" component={Location} />
+      <Stack.Screen name="Payment" component={Payment} />
+      <Stack.Screen name="EditProfile" component={EditProfile} />
     </Stack.Navigator>
   );
 }

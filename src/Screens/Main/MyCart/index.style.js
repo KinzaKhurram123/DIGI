@@ -4,75 +4,87 @@ import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
 export const styles = StyleSheet.create({
   safe_area: {
     flex: 1,
+    backgroundColor: COLORS.white,
   },
   main_view: {
     flex: 1,
     paddingHorizontal: SIZES.padding,
-    paddingTop: SIZES.padding,
-    backgroundColor: COLORS.white,
+    paddingTop: SIZES.padding2,
   },
-  number: {
-    textAlign: 'left',
-    ...FONTS.Regular16,
+
+  coupon_view: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: SIZES.padding * 3,
+    backgroundColor: COLORS.white,
+    paddingHorizontal: SIZES.padding,
+  },
+  coupon_inner_view: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: COLORS.light_gray,
+    paddingHorizontal: SIZES.padding2,
+    marginRight: SIZES.padding2,
+    width: "74%",
+    height: 40,
+    borderRadius: SIZES.padding,
+  },
+  coupon_text: {
+    flex: 1,
+    marginLeft: SIZES.padding2,
+    textAlign: "left",
+    ...FONTS.Regular14,
+    fontWeight: "600",
+    color: COLORS.text_placeholder,
+  },
+  coupon_btn: {
+    flex: 1,
+    height: 40,
+    marginTop: 0,
+  },
+  payment_text: {
+    textAlign: "left",
+    ...FONTS.Bold14,
+    marginTop: SIZES.padding * 3,
+    fontWeight: "600",
+    color: COLORS.primary,
+    marginLeft: SIZES.padding,
   },
   text_row: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginTop: SIZES.padding2,
+    paddingHorizontal: SIZES.padding,
   },
   order_text: {
-    width: '50%',
-    ...FONTS.Regular16,
-    textAlign: 'left',
+    ...FONTS.Regular12,
+    color: "rgba(9, 15, 71, 0.45)",
   },
-  order_title: {
-    textAlign: 'left',
-    ...FONTS.Bold16,
+  order_price: {
+    ...FONTS.Regular12,
   },
-  order_desc: {
-    textAlign: 'left',
-    ...FONTS.Medium14,
-    marginTop: -5,
+  total_text: {
+    ...FONTS.Regular14,
+    color:COLORS.primary
+  },
+  text_price: {
+    ...FONTS.Bold14,
+    color:COLORS.primary
+
+  },
+  btn_row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: SIZES.padding,
+    paddingHorizontal: SIZES.padding,
   },
   btn: {
-    marginTop: SIZES.padding * 3,
+    width: "47%",
+    height: 50,
     backgroundColor: COLORS.secondary,
   },
-
-  card_image: {
-    width: 80,
-    height: 80,
-    borderRadius: SIZES.padding2,
-    marginBottom: -SIZES.padding2,
-  },
-  card_content: {
-    // marginTop: SIZES.padding2 * 0.2,
-
-    alignItems: 'flex-start',
-  },
-  name_text: {
-    ...FONTS.Bold14,
-  },
-  quantity_text: {
-    ...FONTS.Medium14,
-    color: COLORS.primary,
-    marginTop: -SIZES.padding2 * 0.3,
-  },
-  counter_view: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  number_view: {
-    borderColor: 'rgba(9, 33, 67, 0.11)',
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 40,
-    height: 30,
-  },
-  total_num_text: {
-    ...FONTS.Bold12,
+  btn_text: {
+    ...FONTS.Bold11,
   },
 });

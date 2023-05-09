@@ -38,5 +38,10 @@ export const styles = StyleSheet.create({
    justifyContent:"space-between",
    paddingEnd:SIZES.padding*2.5,
    paddingStart:SIZES.padding*3
-  }
+  },
+  btn:{
+    marginTop:SIZES.padding * 3,
+    backgroundColor:COLORS.secondary,
+    paddingHorizontal:SIZES.padding
+}
 });
