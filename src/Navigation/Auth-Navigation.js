@@ -16,6 +16,7 @@ import SelectLOcation from '../Screens/SelectLocation';
 import Location from '../Screens/Location';
 import Payment from '../Screens/Payment';
 import EditProfile from '../Screens/Main/EditProfile';
+import Filter from '../Screens/Filter';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,7 @@ function RegisterStack() {
       <Stack.Screen name="Location" component={Location} />
       <Stack.Screen name="Payment" component={Payment} />
       <Stack.Screen name="EditProfile" component={EditProfile} />
+      <Stack.Screen name="Filter" component={Filter} />
     </Stack.Navigator>
   );
 }

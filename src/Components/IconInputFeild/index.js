@@ -1,7 +1,7 @@
-import React from "react";
-import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
-import { Icons } from "../index";
-import { COLORS, FONTS, SIZES } from "../Constant";
+import React from 'react';
+import {StyleSheet, TextInput, TouchableOpacity, View} from 'react-native';
+import {Icon, Icons} from '../index';
+import {COLORS, FONTS, SIZES} from '../Constant';
 
 const IconInputField = ({
   style,
@@ -17,16 +17,18 @@ const IconInputField = ({
   value,
   icon,
   inputStyle,
-  rightIcon,
+  leftIcon,
   iconStyle,
   maxLength,
-  onPressRightIcon,
+  onPressleftIcon,
 }) => {
   return (
     <View style={[styles.main_view, style]}>
-      {/* {icon && (
-        <Icons name={icon ? icon : null} style={[styles.icon, iconStyle]} />
-      )} */}
+      {leftIcon && (
+        <TouchableOpacity onPress={onPressleftIcon}>
+          <Icon name={leftIcon} style={[styles.icon, iconStyle]} />
+        </TouchableOpacity>
+      )}
       <TextInput
         ref={ref}
         onChangeText={onChangeText}
@@ -43,26 +45,21 @@ const IconInputField = ({
         editable={isEdit}
         underlineColorAndroid="transparent"
       />
-      {/* {rightIcon && (
-        <TouchableOpacity onPress={onPressRightIcon}>
-          <Icons name={rightIcon} style={[styles.icon, iconStyle]} />
-        </TouchableOpacity>
-      )} */}
     </View>
   );
 };
 const styles = StyleSheet.create({
   main_view: {
     height: 50,
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     marginTop: SIZES.padding,
     backgroundColor: COLORS.light_gray2,
     paddingHorizontal: SIZES.padding2 * 1.5,
     borderRadius: SIZES.padding * 2,
   },
   icon: {
-    width: "7%",
+    width: '7%',
   },
   input: {
     flex: 1,

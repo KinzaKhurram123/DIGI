@@ -22,13 +22,12 @@ import Buttons from '../Buttons/buttons';
 
 const CardView = ({onPress}) => {
   return (
-    <SafeAreaView style={styles}>
+    <SafeAreaView style={styles.safe_area}>
       <View style={{height: SIZES.padding, marginTop: SIZES.padding}} />
-
       <View style={styles.main_view}>
         <View style={styles.card_view}>
           <View style={styles.card_left_view}>
-            <SingleCard />
+            {/* <SingleCard /> */}
             <View
               style={{
                 flex: 1,

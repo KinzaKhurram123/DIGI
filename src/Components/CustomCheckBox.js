@@ -23,7 +23,7 @@ const CustomCheckBox = ({
         right_text_view ? (
           right_text_view
         ) : (
-          <Text style={[styles.text, textStyle]}  >{right_text}</Text>
+          <Text style={[styles.text, textStyle]}>{right_text}</Text>
         )
       }
       unCheckedImage={

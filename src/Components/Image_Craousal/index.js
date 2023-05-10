@@ -1,46 +1,44 @@
-import {Dimensions, StyleSheet, Text, View,Image} from 'react-native';
-import React, {useState} from 'react';
-import Carousel, {Pagination} from 'react-native-snap-carousel';
-import {styles} from './index.style';
-import {COLORS} from '../Constant';
+// import React from 'react';
+// import {View} from 'react-native';
+// import Carousel, {Pagination} from 'react-native-snap-carousel';
+// import CarouselCardItems ,{ SLIDER_WIDTH, ITEM_WIDTH } from './CarousalItem';
+// import data from './data';
 
-const ImageCarousel = ({array}) => {
-  const [index, setIndex] = useState(0);
-  const renderItem = ({item}) => {
-    return (
-      <View style={styles.slide}>
-        <Image source={item} resizeMode="cover" style={styles.image} />
-      </View>
-    );
-  };
-  const sliderWidth = Dimensions.get('window').width;
-  const itemHeight = Dimensions.get('window').height;
-  return (
-    <>
-      {/* <Carousel
-        items={array}
-        data={array}
-        style={{height: '100%', alignSelt: 'center'}}
-        renderItem={renderItem}
-         
-        sliderWidth={sliderWidth}
-        itemWidth={sliderWidth}
-        itemHeight={itemHeight}
-        onSnapToItem={index => setIndex(index)}
-        autoplay
-        
-      /> */}
-      <Pagination
-        containerStyle={{marginBottom: -50}}
-        dotContainerStyle={styles.dot_view}
-        dotsLength={array?.lenght}
-        activeDotIndex={index}
-        dotStyle={styles.active_dot}
-        inactiveDotColor={COLORS.white}
-        inactiveDotStyle={styles.inactive_dot}
-      />
-    </>
-  );
-};
+// const CarouselCards = () => {
+//   const isCarousel = React.useRef(null);
+//   const [index, setIndex] = React.useState(0);
 
-export default ImageCarousel;
+//   return (
+//     <View>
+//       <Carousel
+//         layout="tinder"
+//         layoutCardOffset={9}
+//         ref={isCarousel}
+//         data={data}
+//         renderItem={CarouselCardItems}
+//         sliderWidth={SLIDER_WIDTH}
+//         itemWidth={ITEM_WIDTH}
+//         inactiveSlideShift={0}
+//         useScrollView={true}
+//         onSnapToItem={(index) => setIndex(index)}
+//       />
+//       <Pagination
+//         dotsLength={data.length}
+//         activeDotIndex={index}
+//         carouselRef={isCarousel}
+//         dotStyle={{
+//           width: 10,
+//           height: 10,
+//           borderRadius: 5,
+//           marginHorizontal: 0,
+//           backgroundColor: 'rgba(0, 0, 0, 0.92)',
+//         }}
+//         inactiveDotOpacity={0.4}
+//         inactiveDotScale={0.6}
+//         tappableDots={true}
+//       />
+//     </View>
+//   );
+// };
+
+// export default CarouselCards;

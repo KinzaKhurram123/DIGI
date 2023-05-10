@@ -6,13 +6,12 @@ import {
   ScrollView,
   Image,
   FlatList,
+  SafeAreaView,
 } from 'react-native';
 import React from 'react';
 import {COLORS, FONTS, images, SIZES} from '../../../Components/Constant';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {
   CommonHeader,
-  // ImageCarousel,
   SingleCategoryView,
   SingleImageCardView,
   SingleOtcView,
@@ -21,11 +20,6 @@ import {styles} from './indexstyle';
 import {CommonActions} from '@react-navigation/native';
 
 export default function Home({navigation}) {
-  // const sliderArray = [
-  //   images.slider_image_2,
-  //   images.slider_image,
-  //   images.slider_image_2,
-  // ];
   const Brandes = [images.logos_abbott, images.logos_gsk, images.logos_nestle];
   const categories = [
     images.category_care,
@@ -97,7 +91,7 @@ export default function Home({navigation}) {
         isDrawer={true}
         isHome={true}
         hasSearchBar={true}
-        // onPressSearchBar={navigation.navigate('Search')}
+        onPressSearchBar={()=> navigation.navigate('Search')}
       />
       <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>
         <View style={styles.main_view}>
@@ -113,7 +107,6 @@ export default function Home({navigation}) {
               <Text>Medicine by Systemic Class</Text>
             </TouchableOpacity>
           </View>
-          {/* <ImageCarousel array={sliderArray}/> */}
           <View>
             <View style={styles.heading_view}>
               <Text style={styles.heading_text}>Brandes</Text>
@@ -128,9 +121,7 @@ export default function Home({navigation}) {
               return (
                 <TouchableOpacity
                   onPress={() =>
-                    navigation.navigate('BrandDetail', {
-                      data: item,
-                    })
+                    navigation.navigate('BrandScreen')
                   }>
                   <SingleImageCardView
                     key={item.id}
@@ -158,7 +149,7 @@ export default function Home({navigation}) {
                 image={item.image}
                 name={item.name}
                 onPress={() => {
-                  navigation.navigate('OrderPlaced');
+                  navigation.navigate('Category');
                 }}
               />
             );

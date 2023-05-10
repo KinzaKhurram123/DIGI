@@ -24,7 +24,7 @@ const CommonHeader = ({
   onPressNotification,
   onPresRightIcon,
   onPressUser,
-  isHome = false,
+  isprofile = true,
   hasSearchBar = false,
   onChangeText,
   titleStyle,
@@ -35,7 +35,8 @@ const CommonHeader = ({
   onPressCross,
   searchValue,
   edit,
-  onpressEdit
+  onpressEdit,
+  onpresscart
 }) => {
   return (
     <View style={[styles.main_view, style]}>
@@ -60,10 +61,10 @@ const CommonHeader = ({
             </TouchableOpacity>
             <TouchableOpacity
               style={{marginLeft: SIZES.padding}}
-              onpress={() => navigation.navigate('MyCart')}>
+              onpress={onpresscart}>
               <Icon name={top_right_icon} />
             </TouchableOpacity>
-            {isHome && (
+            {isprofile && (
               <TouchableOpacity
                 style={{marginLeft: SIZES.padding}}
                 onPress={onPressUser}>

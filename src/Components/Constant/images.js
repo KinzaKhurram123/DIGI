@@ -1,6 +1,6 @@
 import logo from "../../assets/images/logo.png";
 import black_logo from "../../assets/images/black_logo.png";
-import splash_background from "../../assets/images/splash.png";
+import splash_background from "../../assets/images/splash_background.png";
 import background_image from "../../assets/images/background_image.jpg";
 import medicine from "../../assets/images/medicine.jpg";
 import splash_screen from "../../assets/images/1.png";
@@ -43,6 +43,12 @@ import order_left_image from "../../assets/images/order_left_image.png";
 import order_right_image from "../../assets/images/order_right_image.png";
 import no_image from "../../assets/images/no_image.png";
 import profile from "../../assets/images/profile.png";
+import  Ambirix from "../../assets/images/medicines/Ambirix.png"
+import  Apretude from "../../assets/images/medicines/Apretude.png"
+import  Amonxil from "../../assets/images/medicines/Amonxil.png"
+import Anrod  from "../../assets/images/medicines/Anrod.png"
+import Augmentin2  from "../../assets/images/medicines/Augmentin2.png"
+import Avamys  from "../../assets/images/medicines/Avamys.png"
 
 export default {
   profile,
@@ -90,4 +96,10 @@ export default {
   order_left_image,
   order_right_image,
   no_image,
+  Ambirix,
+  Apretude,
+  Amonxil,
+  Anrod,
+  Augmentin2,
+  Avamys
 };

@@ -18,6 +18,7 @@ import MyOrder from '../Screens/MyOrder';
 import Notification from '../Screens/Main/Notification';
 import Category from '../Screens/Main/Category';
 import MyCart from '../Screens/Main/MyCart';
+import BrandScreen from '../Screens/BrandScreen';
 const Drawer = createDrawerNavigator();
 
 export const Main = ({focused}) => {
@@ -47,6 +48,7 @@ export const Main = ({focused}) => {
       <Drawer.Screen name="Notification" component={Notification} />
       <Drawer.Screen name="Category" component={Category} />
       <Drawer.Screen name="MyCart" component={MyCart} />
+      <Drawer.Screen name="BrandScreen" component={BrandScreen} />
 
     </Drawer.Navigator>
   );

@@ -56,7 +56,7 @@ export default function Login({navigation}) {
               <Buttons
                 buttonText="Login"
                 style={styles.btn}
-                onPress={() => navigation.navigate('Category')}
+                onPress={() => navigation.navigate('Main')}
               />
             </View>
           </InnerContainer>

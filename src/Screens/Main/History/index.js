@@ -8,18 +8,20 @@ import {SIZES} from '../../../Components/Constant';
 import SingleOrderView from './Components/SingleOrderView';
 import Buttons from '../../../Components/Buttons/buttons';
 
-const History = () => {
+const History = ({navigation}) => {
   const [name, setName] = useState(null);
   const [address, setAddress] = useState(null);
 
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader title={'History'} onPressIcon={() => navigation.goBack()} />
+      <CommonHeader title={'History'}
+      onpresscart={() => navigation.navigate('MyCart')}
+      onPressIcon={() => navigation.goBack()} />
       <View style={styles.main_view}>
         <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
           <IconInputField
             value={name}
-            placeholder={'Name'}
+            placeholder="Name"
             rightIcon={edit_icon}
             onChangeText={text => setName(text)}
           />
@@ -30,13 +32,12 @@ const History = () => {
             placeholder="Address"
           />
           <View style={{height: SIZES.padding * 1.5}} />
-
           <Text style={styles.number}>Mobile Number</Text>
           <Text style={styles.number}>+92 315 773 2534</Text>
           <View style={styles.text_row}>
-            <Text style={styles.order_text}>Order History</Text>
+            <Text style={styles.order_text}>{'Order History'}</Text>
             <View>
-              <Text style={styles.order_title}>Morning Energy</Text>
+              <Text style={styles.order_title}>Morning & Energy</Text>
               <Text style={styles.order_desc}>Clean & Clear</Text>
             </View>
           </View>
@@ -52,7 +53,6 @@ const History = () => {
             order_date={'28th Mar 22'}
             eta={'03rd Apr 22'}
             quantity={'100'}
-            btntext={'Re Order'}
           />
           <SingleOrderView
             status={'Pending'}
@@ -65,11 +65,10 @@ const History = () => {
             order_date={'28th Mar 22'}
             eta={'03rd Apr 22'}
             quantity={'100'}
-            btntext={'Cancle Order'}
           />
-          <Buttons buttonText={'New Order'} style={styles.btn}/>
-          <View style={{ height: SIZES.padding }} />
         </ScrollView>
+        <Buttons buttonText={'New Order'} style={styles.btn} />
+        <View style={{height: SIZES.padding}} />
       </View>
     </SafeAreaView>
   );

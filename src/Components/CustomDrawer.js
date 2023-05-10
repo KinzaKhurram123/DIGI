@@ -32,7 +32,7 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'Our Store',
-      goto: () => navigation.navigate('OurStore'),
+      goto: () => navigation.navigate('BrandScreen'),
     },
     {
       title: 'Profile',
@@ -40,7 +40,7 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'Carees',
-      goto: () => navigation.navigate('MyCart'),
+      goto: () => props.navigation.navigate('cares'),
     },
     {
       title: 'Blog',
@@ -183,7 +183,7 @@ const CustomDrawer = ({navigation}) => {
             </TouchableOpacity>
           )}
         />
-         <View style={{height: SIZES.padding2}} />
+        <View style={{height: SIZES.padding2}} />
         <View style={{padding: 15, marginTop: 10}}>
           <Text style={{color: 'white', fontSize: 20}}>Support</Text>
         </View>
@@ -221,108 +221,6 @@ const CustomDrawer = ({navigation}) => {
           </Text>
         </TouchableOpacity>
       </View>
-      {/* <View style={{justifyContent: 'space-between', flexDirection: 'row'}}>
-          <View style={{paddingLeft: 30, marginTop: 50}}>
-            <Image
-              source={images.logo}
-              style={{justifyContent: 'flex-start'}}
-            />
-          </View>
-          <View style={{alignSelf: 'flex-end'}}>
-            <TouchableOpacity onPress={() => props.navigation.closeDrawer()}>
-              <Icon name={close_black_icon} />
-            </TouchableOpacity>
-          </View>
-        </View> */}
-      {/* <View style={{padding: 15, marginTop: 10}}>
-          <Text style={{color: 'white', fontSize: 20}}>Navigate</Text>
-          <View
-            style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
-            <View style={{flex: 1, height: 1, backgroundColor: 'white'}} />
-            <View style={{flex: 1, height: 1, backgroundColor: 'white'}} />
-          </View>
-          <FlatList
-            data={arr}
-            scrollEnabled={false}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({item, index}) => (
-              <TouchableOpacity style={styles.faltlistitem} onPress={item.goto}>
-                <Text style={{color: 'white', fontSize: 15}}>{item.title}</Text>
-              </TouchableOpacity>
-            )}
-          />
-          <View style={{padding: 10, marginTop: 10}}>
-            <Text style={{color: 'white', fontSize: 20}}>Categories</Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginTop: 10,
-              }}>
-              <View style={{flex: 1, height: 1, backgroundColor: 'white'}} />
-              <View style={{flex: 1, height: 1, backgroundColor: 'white'}} />
-            </View>
-            <FlatList
-              data={Categories}
-              scrollEnabled={false}
-              keyExtractor={(item, index) => index.toString()}
-              renderItem={({item, index}) => (
-                <TouchableOpacity
-                  style={styles.faltlistitem}
-                  onPress={item.goto}>
-                  <Text style={{color: 'white', fontSize: 15}}>
-                    {item.title}
-                  </Text>
-                </TouchableOpacity>
-              )}
-            />
-          </View>
-          <View style={{padding: 10, marginTop: 10}}>
-            <Text style={{color: 'white', fontSize: 20}}>Supports</Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginTop: 10,
-              }}>
-              <View style={{flex: 1, height: 1, backgroundColor: 'white'}} />
-              <View style={{flex: 1, height: 1, backgroundColor: 'white'}} />
-            </View>
-            <FlatList
-              data={Supports}
-              scrollEnabled={false}
-              keyExtractor={(item, index) => index.toString()}
-              renderItem={({item, index}) => (
-                <TouchableOpacity
-                  style={styles.faltlistitem}
-                  onPress={item.goto}>
-                  <Text style={{color: 'white', fontSize: 15}}>
-                    {item.title}
-                  </Text>
-                </TouchableOpacity>
-              )}
-            />
-          </View>
-          <TouchableOpacity style={{padding: 20}}>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignSelf: 'flex-start',
-                alignItems: 'flex-start',
-              }}>
-              <Image
-                source={images.blog_image}
-                style={{
-                  height: 22,
-                  width: 22,
-                  resizeMode: 'contain',
-                  margin: 4,
-                }}
-              />
-              <Text style={{color: '#FF4445', fontSize: 20}}>Logout</Text>
-            </View>
-          </TouchableOpacity>
-        </View> */}
     </ScrollView>
   );
 };

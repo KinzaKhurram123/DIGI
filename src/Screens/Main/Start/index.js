@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SvgXml} from 'react-native-svg';
 import {call_icon} from '../../../assets/icons';
+import {CommonHeader} from '../../../Components';
 import Buttons from '../../../Components/Buttons/buttons';
 import {COLORS, SIZES} from '../../../Components/Constant';
 import Container from '../../../Components/Container/Container';
@@ -11,7 +12,7 @@ import Logo from '../../../Components/ImageView/logo';
 export default function Start({navigation}) {
   return (
     <Container>
-      <View style={styles.blueback}></View>
+      <CommonHeader isIcon={false} isBackIcon={false}/>
       <View style={{flex: 1, paddingHorizontal: 20}}>
         <View style={{height: 40}} />
         <Logo />

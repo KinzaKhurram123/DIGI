@@ -21,27 +21,36 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
   },
-  name:{
-    textAlign:"center",
-    color:COLORS.primary,
-    ...FONTS.Bold27,
+  name: {
+    textAlign: 'center',
+    color: COLORS.primary,
+    ...FONTS.Bold14,
   },
-
-  email:{
-    textAlign:"center",
-    color:COLORS.primary,
+  text:{
+    textAlign: 'center',
+    // flex: 1,
+    justifyContent:"flex-start",
+    color: COLORS.primary,
+    ...FONTS.Medium11,
+  },
+  email: {
+    textAlign: 'center',
+    color: COLORS.primary,
     ...FONTS.Regular16,
   },
-  view:{
-   flexDirection:"row",
-   padding:SIZES.padding2*2.5,
-   justifyContent:"space-between",
-   paddingEnd:SIZES.padding*2.5,
-   paddingStart:SIZES.padding*3
+  view: {
+    flexDirection: 'row',
+    padding: 10,
+    paddingHorizontal: SIZES.padding * 1.5,
+
+    //  padding:SIZES.padding2*2.5,
+    justifyContent: 'space-between',
+    //  paddingEnd:SIZES.padding*2.5,
+    //  paddingStart:SIZES.padding*3
   },
-  btn:{
-    marginTop:SIZES.padding * 3,
-    backgroundColor:COLORS.secondary,
-    paddingHorizontal:SIZES.padding
-}
+  btn: {
+    marginTop: SIZES.padding * 3,
+    backgroundColor: COLORS.secondary,
+    paddingHorizontal: SIZES.padding,
+  },
 });
