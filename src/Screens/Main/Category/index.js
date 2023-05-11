@@ -82,7 +82,11 @@ const Category = ({navigation}) => {
   const [showDesc, setShowDesc] = useState(null);
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader title={'Category'} />
+      <CommonHeader
+        title={'Category'}
+        isDrawer={true}
+        onPressIcon={() => navigation.openDrawer()}
+      />
       <View style={styles.main_view}>
         <View style={styles.filter_view}>
           <View
@@ -92,9 +96,11 @@ const Category = ({navigation}) => {
               alignItems: 'center',
             }}>
             <Icon name={filter_icon_primary} />
-            <Text style={[{marginLeft: SIZES.padding2}, styles.filter_text]}>
-              Filter
-            </Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Filter')}>
+              <Text style={[{marginLeft: SIZES.padding2}, styles.filter_text]}>
+                Filter
+              </Text>
+            </TouchableOpacity>
           </View>
           <Text style={styles.filter_text}>Sort by</Text>
           <View
@@ -199,12 +205,18 @@ const Category = ({navigation}) => {
           onScrollToIndexFailed={() => {}}
           showsHorizontalScrollIndicator={false}
           style={{paddingHorizontal: SIZES.padding}}
-          ListFooterComponent={<View style={{width: SIZES.padding}} />}
+          ListFooterComponent={<View style={{width: SIZES.padding2}} />}
           renderItem={({item}) => {
-            return <SingleCategoryView image={item.image} name={item.title} />;
+            return (
+              <SingleCategoryView
+                style={styles.margin}
+                image={item.image}
+                name={item.title}
+              />
+            );
           }}
         />
-        <FlatList                   
+        <FlatList
           data={product_list}
           columnWrapperStyle={{justifyContent: 'center'}}
           numColumns={2}
@@ -215,12 +227,10 @@ const Category = ({navigation}) => {
               <SIngleProductView
                 image2={item.imagePro}
                 name={item.name}
-                navigate={() => navigation.navigate('ViewProduct')}
+                // navigate={() => navigation.navigate('ViewProduct')}
                 price={item.price}
                 keyExtractor={item => item?.id}
-                // onPress={() => {
-                //   // navigation.navigate(');
-                // }}
+                onPress={() => navigation.navigate('ViewProduct')}
               />
             );
           }}

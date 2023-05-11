@@ -14,9 +14,12 @@ const History = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader title={'History'}
-      onpresscart={() => navigation.navigate('MyCart')}
-      onPressIcon={() => navigation.goBack()} />
+      <CommonHeader
+        title={'History'}
+        isDrawer={false}
+        onpresscart={() => navigation.navigate('MyCart')}
+        onPressIcon={() => navigation.goBack()}
+      />
       <View style={styles.main_view}>
         <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
           <IconInputField
@@ -66,9 +69,10 @@ const History = ({navigation}) => {
             eta={'03rd Apr 22'}
             quantity={'100'}
           />
+
+          <Buttons buttonText={'New Order'} style={styles.btn} />
+          <View style={{height: SIZES.padding}} />
         </ScrollView>
-        <Buttons buttonText={'New Order'} style={styles.btn} />
-        <View style={{height: SIZES.padding}} />
       </View>
     </SafeAreaView>
   );

@@ -43,7 +43,7 @@ const Rewards = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader onPressIcon={() => navigation.goBack()} title={'Rewards'} />
+      <CommonHeader isDrawer={false} onPressIcon={() => navigation.goBack()} title={'Rewards'} />
       <View style={styles.main_view}>
         
         <Text style={styles.balance_text}>Your Balance</Text>

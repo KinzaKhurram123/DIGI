@@ -87,10 +87,12 @@ export default function Home({navigation}) {
       <CommonHeader
         onPressIcon={() => navigation.openDrawer()}
         title={'Pharamacy'}
+        onPressNotification={() =>navigation.navigate('Notification')}
         isIcon={true}
         isDrawer={true}
         isHome={true}
         hasSearchBar={true}
+        onpresscart={() =>navigation.navigate('MyCart')}
         onPressSearchBar={()=> navigation.navigate('Search')}
       />
       <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>

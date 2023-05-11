@@ -15,6 +15,7 @@ const OTC = ({navigation , props}) => {
       <CommonHeader
         title={'OTC and Health needs'}
         onPressIcon={() => navigation.goBack()}
+        isDrawer={false}
       />
       <View style={styles.main_view}>
         <View style={styles.card_view}>
@@ -59,7 +60,7 @@ const OTC = ({navigation , props}) => {
         />
         <View style={styles.text_row}>
           <Text style={styles.desc}>Don’t have a prescription,</Text>
-          <TouchableOpacity onPress={() => setShowHelpModal(true)}>
+          <TouchableOpacity>
             <Text style={styles.help_text}>need help</Text>
           </TouchableOpacity>
           <Text style={styles.desc}>.</Text>

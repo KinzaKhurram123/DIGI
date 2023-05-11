@@ -20,6 +20,7 @@ const OrderPlaced = ({navigation}) => {
         title={'Order Placed'}
         onPressIcon={() => navigation.goBack()}
         isBackIcon={false}
+        isDrawer={false}
       />
       <View style={styles.main_view}>
         <ScrollView

@@ -1,7 +1,6 @@
-import { StyleSheet,TouchableOpacity, Text, View } from 'react-native'
+import { StyleSheet,TouchableOpacity, Text, View,Image } from 'react-native'
 import React from 'react'
 import { COLORS, FONTS, SIZES } from '../../../Components/Constant'
-import { Image } from 'react-native-svg'
 import { add_round_icon } from '../../../assets/icons'
 import { Icon } from '../../../Components'
 

@@ -15,6 +15,7 @@ const Profile = ({navigation}) => {
         title={'Profile'}
         isIcon={false}
         edit={true}
+        isDrawer={false}
         onPressIcon={() => navigation.goBack()}
         onpressEdit={() => navigation.navigate('EditProfile')}
       />

@@ -42,7 +42,10 @@ export const styles = StyleSheet.create({
     borderBottomColor: COLORS.border_grey
   },
   tab_text: {
-    ...FONTS.Regular13
+    ...FONTS.Regular23,
+    padding: SIZES.padding,
+    color: COLORS.primary
+
   },
   card_view: {
     marginTop: SIZES.padding,
@@ -71,6 +74,7 @@ export const styles = StyleSheet.create({
     textAlign: 'left',
     ...FONTS.Medium12,
     color: COLORS.Light_blue,
+    width: "70%"
   },
   card_btn: {
     flexDirection: "row",

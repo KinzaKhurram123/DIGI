@@ -45,7 +45,7 @@ const SingleOrderView = ({
       <View style={{height: SIZES.padding2}} />
       <View style={styles.top_row}>
         <Text style={styles.medicine}>{name1}</Text>
-        <Text style={styles.medicine}> {'Rs. ' + price1} </Text>
+        <Text style={styles.medicine}>{'Rs. ' + price1} </Text>
       </View>
       <View style={styles.top_row}>
         <Text style={styles.medicine}>{name2} </Text>

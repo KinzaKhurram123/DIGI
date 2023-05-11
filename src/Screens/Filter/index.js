@@ -12,7 +12,7 @@ const Filter = () => {
   return (
     <View style={{backgroundColor: COLORS.white, flex: 1}}>
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() =>navigation.goBack()}>
           <Text style={styles.title}>Filter</Text>
         </TouchableOpacity>
         <TouchableOpacity>

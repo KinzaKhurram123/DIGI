@@ -28,7 +28,7 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'About',
-      goto: () => navigation.navigate('About'),
+      goto: () => props.navigation.navigate('About'),
     },
     {
       title: 'Our Store',

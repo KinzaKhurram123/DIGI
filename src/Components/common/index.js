@@ -21,7 +21,7 @@ const CommonHeader = ({
   onPressIcon,
   isDrawer = false,
   isIcon = true,
-  onPressNotification,
+  onPressNotification=true,
   onPresRightIcon,
   onPressUser,
   isprofile = true,
@@ -36,7 +36,7 @@ const CommonHeader = ({
   searchValue,
   edit,
   onpressEdit,
-  onpresscart
+  onpresscart=true
 }) => {
   return (
     <View style={[styles.main_view, style]}>

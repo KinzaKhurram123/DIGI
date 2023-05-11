@@ -50,7 +50,7 @@ const EditProfile = ({navigation}) => {
           leftIcon={location_icon}
           onChangeText={text => setName(text)}
         />
-        <View style={{height: '35%'}}/>
+        <View style={{height: '25%'}}/>
         <Buttons style={styles.btn} buttonText={'Edit'} />
       </View>
     </SafeAreaView>

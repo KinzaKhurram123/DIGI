@@ -49,6 +49,7 @@ const Medician_systemic = ({navigation}) => {
         title={'Medician By \nSystemic Class'}
         titleStyle={{marginTop: SIZES.padding}}
         style={{paddingTop: SIZES.padding * 1.5}}
+        onPressIcon={() => navigation.goBack()}
       />
       <View style={styles.main_view}>
         <ScrollView showsVerticalScrollIndicator={false}>

@@ -1,6 +1,5 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View,Image} from 'react-native';
 import React from 'react';
-import {Image} from 'react-native-svg';
 import {COLORS, FONTS, SIZES} from '../../../../Components/Constant';
 import { Icon } from '../../../../Components';
 import { white_add_icon } from '../../../../assets/icons';
@@ -12,7 +11,7 @@ const SIngleProductView = ({image2, onPress,navigate, onPressAdd, name , price})
     <TouchableOpacity
       onPress={onPress}
       style={styles.main_view}>
-        <RBSheet ref={ref =>{
+        {/* <RBSheet ref={ref =>{
           this.RBSheet = ref;
         }}
         height={400}
@@ -27,7 +26,7 @@ const SIngleProductView = ({image2, onPress,navigate, onPressAdd, name , price})
         }}
         >
         <CardView onPress={navigate}/>
-        </RBSheet>
+        </RBSheet> */}
       <View style={styles.image_view}>
         <Image style={styles.image} source={image2} />
       </View>

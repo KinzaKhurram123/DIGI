@@ -21,7 +21,7 @@ export default SingleImageCategoryVeiw;
 const styles = StyleSheet.create({
   main_view: {
     width: 120,
-    padding: SIZES.padding2 * 0.5,
+    padding: SIZES.padding2 * 0.3,
     backgroundColor: COLORS.white,
     borderRadius: SIZES.padding2 * 1.5,
     marginRight: SIZES.padding2,
