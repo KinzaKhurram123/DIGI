@@ -91,8 +91,9 @@ export default function Home({navigation}) {
         isIcon={true}
         isDrawer={true}
         isHome={true}
+        isprofile={true}
         hasSearchBar={true}
-        onpresscart={() =>navigation.navigate('MyCart')}
+        onpresscart={() => navigation.navigate('MyCart')}
         onPressSearchBar={()=> navigation.navigate('Search')}
       />
       <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>
@@ -150,9 +151,7 @@ export default function Home({navigation}) {
               <SingleCategoryView
                 image={item.image}
                 name={item.name}
-                onPress={() => {
-                  navigation.navigate('Category');
-                }}
+                onPress={() => navigation.navigate('Category')}
               />
             );
           }}

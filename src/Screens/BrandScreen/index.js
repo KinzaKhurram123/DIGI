@@ -16,7 +16,7 @@ import SingleBrandView from './component/SingleBrandView';
 const brand = [
   {
     id: 1,
-    imagePro: images.Amonxil,
+    image: images.Amonxil,
     name: 'Amoxil',
     price: '500',
   },

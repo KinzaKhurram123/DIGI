@@ -5,13 +5,12 @@ import {
   Image,
   SafeAreaView,
   Button,
+  TouchableOpacity,
+  ScrollView
 } from 'react-native';
 import React from 'react';
 import {COLORS, FONTS, images, SIZES} from '../Constant';
 import SingleCardImageView from './SingleImageCardView';
-import SingleCard from './component/SingleCard';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
-import {Icon} from '..';
 import {
   add_round_icon,
   back_arrow_icon,
@@ -19,6 +18,7 @@ import {
   substract_round_icon,
 } from '../../assets/icons';
 import Buttons from '../Buttons/buttons';
+import { Icon } from '..';
 
 const CardView = ({onPress}) => {
   return (

@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 import {sin} from 'react-native-reanimated';
 import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
+import Signup from '../Signup';
 
 export const styles = StyleSheet.create({
   safe_area: {
@@ -25,11 +26,11 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     color: COLORS.primary,
     ...FONTS.Bold14,
+    paddingBottom: SIZES.padding
   },
-  text:{
+  text: {
     textAlign: 'center',
-    // flex: 1,
-    justifyContent:"flex-start",
+    justifyContent: 'flex-start',
     color: COLORS.primary,
     ...FONTS.Medium11,
   },
@@ -40,9 +41,9 @@ export const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
-    padding: 10,
-    paddingHorizontal: SIZES.padding * 1.5,
-
+    paddingVertical:SIZES.padding,
+    // padding: 10,
+    // paddingHorizontal: SIZES.padding * 1.5,
     //  padding:SIZES.padding2*2.5,
     justifyContent: 'space-between',
     //  paddingEnd:SIZES.padding*2.5,
@@ -53,4 +54,17 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
     paddingHorizontal: SIZES.padding,
   },
+  row1: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  row2: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  name1:{
+    textAlign: 'center',
+    color: COLORS.primary,
+    ...FONTS.Bold14,
+  }
 });

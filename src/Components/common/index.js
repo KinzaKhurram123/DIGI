@@ -1,7 +1,6 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet,TouchableOpacity, Text, View,Image} from 'react-native';
 import React from 'react';
 import {styles} from './index.style';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import {Icon, IconInputField} from '../index';
 import {
   back_arrow_icon,
@@ -14,14 +13,13 @@ import {
   top_right_icon,
 } from '../../assets/icons';
 import {images, SIZES} from '../Constant';
-import {Image} from 'react-native-svg';
 const CommonHeader = ({
   navigation,
   title,
   onPressIcon,
   isDrawer = false,
   isIcon = true,
-  onPressNotification=true,
+  onPressNotification,
   onPresRightIcon,
   onPressUser,
   isprofile = true,

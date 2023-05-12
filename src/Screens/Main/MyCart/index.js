@@ -30,7 +30,7 @@ const MyCart = ({navigation}) => {
           <Buttons
             style={styles.coupon_btn}
             buttonText="Apply"
-            onPress={navigation.navigate('DeliverOption')}
+            // onPress={navigation.navigate('DeliverOption')}
           />
         </View>
         <Text style={styles.payment_text}>Payment Summary</Text>

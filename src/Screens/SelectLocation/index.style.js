@@ -15,15 +15,20 @@ export const styles = StyleSheet.create({
         position: "absolute",
         bottom: 0,
         padding: SIZES.padding,
-        width: "100%"
+        width: "100%", 
+        alignContent:"center"
     },
     title: {
         marginTop: SIZES.padding,
-        ...FONTS.Regular18
+        ...FONTS.Regular18,
+        textAlign:"center",
+        color:COLORS.primary
     },
     desc: {
         ...FONTS.Regular14,
-        marginTop: SIZES.padding
+        marginTop: SIZES.padding,
+        textAlign:"center",
+        color:COLORS.primary
     },
     check_box: {
         marginTop: SIZES.padding,

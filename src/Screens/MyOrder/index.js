@@ -1,7 +1,6 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView,ScrollView, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {styles} from './index.style';
-import {ScrollView} from 'react-native-gesture-handler';
 import {CommonHeader, IconInputField} from '../../Components';
 import {edit_icon} from '../../../assets/icons';
 import {SIZES} from '../../Components/Constant';
@@ -14,7 +13,7 @@ const MyOrder= ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader title={'My Order'} onPressIcon={() => navigation.goBack()} />
+      <CommonHeader title={'My Order'} onPressIcon={() => navigation.goBack()} isprofile={false} />
       <View style={styles.main_view}>
         <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
           <View style={{height: SIZES.padding * 1.5}} />

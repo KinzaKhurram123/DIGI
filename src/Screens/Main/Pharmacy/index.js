@@ -87,12 +87,6 @@ import {
         price: '500',
       },
     ];
-    // const Data = ({item}) => (
-    //   <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center'}}>
-    //     <Image src={item.image} style={styles.image_card} />
-    //     <Text>{item.title}</Text>
-    //   </View>
-    // );
     return (
       <SafeAreaView style={styles.safe_area}>
         <CommonHeader

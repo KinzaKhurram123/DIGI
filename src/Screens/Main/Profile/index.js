@@ -23,10 +23,26 @@ const Profile = ({navigation}) => {
         <ScrollView showsHorizontalScrollIndicator={false}>
           <View style={styles.profile}>
             <Image style={styles.profile_iamge} source={images.profile} />
-            <Text style={styles.name}>Ivan Smith</Text>
+            <Text style={styles.name1}>Ivan Smith</Text>
             <Text style={styles.email}>@ivansmith654</Text>
           </View>
           <View style={{paddingHorizontal: SIZES.padding}}>
+            <View style={styles.view}>
+              <View style={styles.row1}>
+                <Text style={styles.name}>Name</Text>
+                <Text style={styles.name}>Email</Text>
+                <Text style={styles.name}>Phone Number</Text>
+                <Text style={styles.name}>Adress</Text>
+              </View>
+              <View style={styles.row2}>
+                <Text style={styles.name}>Ivan Smith</Text>
+                <Text style={styles.name}>ivansmith654</Text>
+                <Text style={styles.name}>+123 456 7890</Text>
+                <Text style={styles.name}>Suit No 123, San Francisco, CA </Text>
+              </View>
+            </View>
+          </View>
+          {/* <View style={{paddingHorizontal: SIZES.padding}}>
             <View style={styles.view}>
               <Text style={styles.name}>Name</Text>
               <Text>Ivan Smith</Text>
@@ -48,7 +64,14 @@ const Profile = ({navigation}) => {
               buttonText={'Edit Profile'}
               style={styles.btn}
             />
-          </View>
+          </View> */}
+          <View style={{padding:SIZES.padding}}>
+             <Buttons
+              onPress={() => navigation.navigate('EditProfile')}
+              buttonText={'Edit Profile'}
+              style={styles.btn}
+            />
+            </View>
           <View style={{height: SIZES.padding}} />
         </ScrollView>
       </View>

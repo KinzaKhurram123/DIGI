@@ -86,6 +86,7 @@ const Category = ({navigation}) => {
         title={'Category'}
         isDrawer={true}
         onPressIcon={() => navigation.openDrawer()}
+        isprofile={true}
       />
       <View style={styles.main_view}>
         <View style={styles.filter_view}>

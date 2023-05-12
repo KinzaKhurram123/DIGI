@@ -24,7 +24,7 @@ const SingleOtcView = ({image, onpress, name, price,navigate}) => {
           },
         }}
       >
-<CardView onPress={navigate}/>
+       <CardView onPress={navigate}/>
       </RBSheet>
       <View style={styles.image_view}>
         <Image style={styles.image} source={image} />

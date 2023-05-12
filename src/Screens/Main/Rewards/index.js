@@ -40,7 +40,6 @@ const rewards = [
 ];
 const Rewards = ({navigation}) => {
   const [toggleTabs, setToggleTabs] = useState('Reward Wallet');
-
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader isDrawer={false} onPressIcon={() => navigation.goBack()} title={'Rewards'} />

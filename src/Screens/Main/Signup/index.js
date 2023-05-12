@@ -23,9 +23,11 @@ import {
   facebook_icon,
   google_icon,
 } from '../../../assets/icons';
+import CustomCheckBox from '../../../Components/CustomCheckBox';
 
 export default function Signup({navigation}) {
   const [isSelected, setSelection] = useState(false);
+  const [isCheck, setIsCheck] = useState(false);
 
   return (
     <Container>
@@ -103,11 +105,14 @@ export default function Signup({navigation}) {
               <View style={{height: 40}} />
               <View style={styles.container}>
                 <View style={styles.checkboxContainer}>
-                  {/* <Checkbox
-                    value={isSelected}
-                    onValueChange={setSelection}
-                    style={styles.checkbox}
-                  /> */}
+                  <CustomCheckBox
+                    style={styles.check_box}
+                    isChecked={isCheck}
+                    setIsChecked={() => setIsCheck(!isCheck)}
+                    checkedColor={COLORS.secondary}
+                    uncheckedBorderColor={COLORS.secondary}
+                    unCheckedColor={'#F3F5F7'}
+                  />
                   <View style={{padding: 1}}>
                     <Text>
                       <Text style={styles.label}>
@@ -178,6 +183,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderBottomStartRadius: 20,
     borderBottomEndRadius: 20,
+  },
+  privacy_view: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    marginTop: SIZES.padding,
+    marginLeft: SIZES.padding2,
+  },
+  privacy_text: {...FONTS.Regular13},
+  privacy_link_text: {
+    ...FONTS.Regular13,
+    color: COLORS.secondary,
+    textDecorationLine: 'underline',
+  },
+  privacy_link_text: {
+    ...FONTS.Regular13,
+    color: COLORS.secondary,
+    textDecorationLine: 'underline',
   },
   checkboxContainer: {
     flexDirection: 'row',
@@ -291,5 +315,9 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.padding2 * 5,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  check_box: {
+    marginTop: SIZES.padding,
+    paddingRight: SIZES.padding2,
   },
 });

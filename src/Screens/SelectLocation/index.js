@@ -36,6 +36,7 @@ const SelectLOcation = ({navigation}) => {
             onPress={() => navigation.navigate('Location')}
             style={styles.btn}
           />
+          <View style={{flexDirection:"row"}}>
           <CustomCheckBox
             style={styles.check_box}
             isChecked={isCheck}
@@ -45,9 +46,11 @@ const SelectLOcation = ({navigation}) => {
             checkedColor={COLORS.primary}
             unCheckedColor={'#F3F5F7'}
             right_text_view={
-              <Text style={styles.billing_text}>Add Billing Address</Text>
+              <Text style={styles.billing_text}>Add Bulling Adress</Text>
             }
           />
+           <Text style={styles.billing_text}>Add Bulling Adress</Text>
+           </View>
           <IconInputField placeholder={'Enter billing Adress'}/>
           <View style={{ height: SIZES.padding }} />
         </View>

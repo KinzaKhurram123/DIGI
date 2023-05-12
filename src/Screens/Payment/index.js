@@ -2,9 +2,13 @@ import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {styles} from './index.style';
 import {CommonHeader, Icon, IconInputField} from '../../Components';
-import {card_icon_secondary, payment_method_icon, primary_location_icon} from '../../assets/icons';
+import {
+  card_icon_secondary,
+  payment_method_icon,
+  primary_location_icon,
+} from '../../assets/icons';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import { COLORS, SIZES } from '../../Components/Constant';
+import {COLORS, SIZES} from '../../Components/Constant';
 import Buttons from '../../Components/Buttons/buttons';
 
 const Payment = ({navigation}) => {
@@ -12,7 +16,7 @@ const Payment = ({navigation}) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader onPressIcon={() => navigation.goBack()} title={'Payment'} />
+      <CommonHeader onPressIcon={() => navigation.goBack()} title={'Payment'} isprofile={false}/>
       <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>
         <View style={styles.address_parent_view}>
           <Text style={styles.title}>Billing Address</Text>
@@ -60,59 +64,68 @@ const Payment = ({navigation}) => {
             <IconInputField style={styles.input} placeholder={'Olivia Rhye'} />
           </View>
           <View style={styles.input_column_two}>
-            <Text style={styles.card_text} >Expiry</Text>
-            <IconInputField placeholder={'06 / 2024'} style={styles.input} />
+            <Text style={styles.card_text}>Expiry</Text>
+            <IconInputField
+              placeholder={'06 / 2024'}
+              keyboardType="number-pad"
+              style={styles.input}
+            />
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.input_column_one}>
-            <Text style={styles.card_text} >Card number</Text>
+            <Text style={styles.card_text}>Card number</Text>
             <IconInputField
               icon={payment_method_icon}
               style={styles.input}
-              iconStyle={{ marginLeft: SIZES.padding2 }}
-              inputStyle={{ marginLeft: SIZES.padding2 }}
+              iconStyle={{marginLeft: SIZES.padding2}}
+              inputStyle={{marginLeft: SIZES.padding2}}
+              keyboardType="number-pad"
               placeholder="1234 1234 1234 1234"
             />
           </View>
           <View style={styles.input_column_two}>
             <Text style={styles.card_text}>CVV</Text>
-            <IconInputField placeholder={"..."} style={styles.input} />
+            <IconInputField
+              placeholder={'...'}
+              keyboardType="number-pad"
+              style={styles.input}
+            />
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.input_column_one}>
             <Text style={styles.card_text}>Security Code</Text>
-            <IconInputField
-              style={styles.input}
-              placeholder="Olivia Rhye"
-            />
+            <IconInputField style={styles.input} placeholder="Olivia Rhye" />
           </View>
           <View style={styles.input_column_two}>
             <Text style={styles.card_text} text="Zip/Postal Code" />
-            <IconInputField placeholder={". . ."} style={styles.input} />
+            <IconInputField
+              placeholder={'. . .'}
+              keyboardType="number-pad"
+              style={styles.input}
+            />
           </View>
         </View>
         <View
           style={[
             styles.row,
-            { justifyContent: "space-between", paddingVertical: 0 },
-          ]}
-        >
-            <Buttons 
-               style={[styles.button, styles.cancel_button]}
-               textStyle={[styles.btn_text, { color: COLORS.primary }]}
-               buttonText="Cancel"
-               onPress={() => setShowModal(true)}
-            />
-            <Buttons 
-             style={[styles.button, styles.confirm_button]}
-             textStyle={styles.btn_text}
-             buttonText="Confirm Order"
-             onPress={() => navigation.navigate('OrderPlaced')}
-            />
+            {justifyContent: 'space-between', paddingVertical: 0},
+          ]}>
+          <Buttons
+            style={[styles.button, styles.cancel_button]}
+            textStyle={[styles.btn_text, {color: COLORS.primary}]}
+            buttonText="Cancel"
+            onPress={() => navigation.goBack()}
+          />
+          <Buttons
+            style={[styles.button, styles.confirm_button]}
+            textStyle={styles.btn_text}
+            buttonText="Confirm Order"
+            onPress={() => navigation.navigate('OrderPlaced')}
+          />
         </View>
-        <View style={{ height: SIZES.padding * 2 }} />
+        <View style={{height: SIZES.padding * 2}} />
       </ScrollView>
     </SafeAreaView>
   );

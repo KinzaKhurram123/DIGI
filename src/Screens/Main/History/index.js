@@ -1,7 +1,6 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet,ScrollView, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {styles} from './index.style';
-import {ScrollView} from 'react-native-gesture-handler';
 import {CommonHeader, IconInputField} from '../../../Components';
 import {edit_icon} from '../../../assets/icons';
 import {SIZES} from '../../../Components/Constant';
@@ -19,6 +18,7 @@ const History = ({navigation}) => {
         isDrawer={false}
         onpresscart={() => navigation.navigate('MyCart')}
         onPressIcon={() => navigation.goBack()}
+        isprofile={false}
       />
       <View style={styles.main_view}>
         <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
@@ -55,6 +55,8 @@ const History = ({navigation}) => {
             order_id={'12345678900000'}
             order_date={'28th Mar 22'}
             eta={'03rd Apr 22'}
+            btntext={'Re order'}
+
             quantity={'100'}
           />
           <SingleOrderView
@@ -64,6 +66,7 @@ const History = ({navigation}) => {
             name2={'Morning Energy - Clean & Clear'}
             price1={'315'}
             price2={'315'}
+            btntext={'Cancle Order'}
             order_id={'12345678900000'}
             order_date={'28th Mar 22'}
             eta={'03rd Apr 22'}

@@ -16,7 +16,9 @@ import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
 import {ScrollView} from 'react-native-gesture-handler';
 import {back_arrow_icon, views_icon} from '../../../assets/icons';
 import Buttons from '../../../Components/Buttons/buttons';
-import { Icon } from '../../../Components';
+import {CommonHeader, Icon} from '../../../Components';
+import CustomCheckBox from '../../../Components/CustomCheckBox.js';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const CELL_COUNT = 4;
 
 export default function Otp({navigation}) {
@@ -49,43 +51,41 @@ export default function Otp({navigation}) {
     );
   };
   return (
-    <Container>
-      <View style={styles.blueback}>
-        {/* <BackButton navigation={navigation} /> */}
-        <TouchableOpacity
-          style={{alignContent: 'space-between', padding: 12}}
-          onPress={() => navigation.navigate('Start')}>
-          <Icon name={back_arrow_icon} />
-        </TouchableOpacity>
-      </View>
+    <SafeAreaView style={styles.safe_area}>
+      <CommonHeader isIcon={false} onPressIcon={() => navigation.goBack()} />
       <ScrollView>
-        <InnerContainer>
-          <View style={{height: 40}} />
-          <View style={styles.mainveiw}>
-            <View style={styles.text_view}>
-              <Text style={styles.text}>Enter Your Code</Text>
-              <View style={{height: 20}} />
-              <Text style={styles.Text}>
+        <View style={styles.main_view}>
+          <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={styles.heading}>Enter Your Code</Text>
+            <View>
+              <Text style={styles.description}>
                 We’ve send you a 4-digit code to 0123456789
               </Text>
-              <View style={{height: 20}} />
             </View>
-            <CodeField
-              ref={ref}
-              {...props}
-              value={value}
-              onChangeText={setValue}
-              cellCount={CELL_COUNT}
-              rootStyle={styles.codeFieldRoot}
-              keyboardType="number-pad"
-              placeholder="1234"
-              textContentType="oneTimeCode"
-              autoComplete="sms-otp"
-              underlineColorAndroid={COLORS.transparent}
-              placeholderTextColor={COLORS.primary_with_opacity}
-              renderCell={renderCell}
-            />
           </View>
+          <CodeField
+            ref={ref}
+            {...props}
+            value={value}
+            onChangeText={setValue}
+            cellCount={CELL_COUNT}
+            rootStyle={styles.codeFieldRoot}
+            keyboardType="number-pad"
+            placeholder="1234"
+            textContentType="oneTimeCode"
+            autoComplete="sms-otp"
+            underlineColorAndroid={COLORS.transparent}
+            placeholderTextColor={COLORS.primary_with_opacity}
+            renderCell={({ index }) => (
+              <View style={styles.cell}>
+                <Text
+                  key={index}
+                  style={styles.code_text}
+                  onLayout={getCellOnLayoutHandler(index)}
+                />
+              </View>
+            )}
+          />
           <View style={styles.btn_row}>
             <Buttons
               onPress={() => navigation.navigate('Login')}
@@ -99,16 +99,25 @@ export default function Otp({navigation}) {
               style={[styles.btn, {backgroundColor: COLORS.secondary}]}
             />
           </View>
-        </InnerContainer>
+        </View>
       </ScrollView>
-    </Container>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  safe_area: {
+    flex: 1,
+    backgroundColor: COLORS.white,
+  },
   codeFieldRoot: {
-    padding: 15,
-    // marginBottom:120
+    marginTop: SIZES.padding * 2,
+    height: 50,
+    marginBottom: SIZES.padding,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+    alignSelf: 'center',
   },
   cell: {
     width: 50,
@@ -147,19 +156,21 @@ const styles = StyleSheet.create({
     width: '48%',
     height: 45,
   },
-  text: {
-    color: COLORS.primary,
-    // ...FONTS.Bold17,
-    ...FONTS.Regular30,
+  heading: {
+    ...FONTS.Regular18,
+    marginTop: SIZES.padding,
   },
-  mainveiw: {
-    justifyContent: 'center',
+  main_view: {
     flex: 1,
     padding: SIZES.padding,
   },
-  Text: {
+  description: {
+    ...FONTS.Regular14,
     color: COLORS.primary_with_opacity,
-    ...FONTS.Regular17,
+    marginTop: SIZES.padding2,
+    width: '80%',
+    alignSelf: 'center',
+    alignItems: 'center',
   },
   text_view: {
     flex: 1,
@@ -172,5 +183,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     margin: SIZES.padding,
+  },
+  cell: {
+    width: "23%",
+    height: 55,
+    color: COLORS.text_placeholder,
+    backgroundColor: COLORS.light_gray2,
+    justifyContent: "center",
+    borderRadius:SIZES.padding * 2
+  },
+  code_text: {
+    color: COLORS.primary_with_opacity,
+    ...FONTS.Regular20,
   },
 });

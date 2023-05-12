@@ -4,12 +4,8 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import CustomDrawer from '../Components/CustomDrawer';
 import History from '../Screens/Main/History';
-import About from '../Screens/Main/About';
-
 import Home from '../Screens/Main/Home';
-import News from '../Screens/Main/News';
 import OTC from '../Screens/Main/OTC';
-import OurStore from '../Screens/Main/OurStore';
 import Rewards from '../Screens/Main/Rewards';
 import CardDiscount from '../Screens/CardDiscount';
 import FAQS from '../Screens/Main/FAQS';
@@ -29,16 +25,12 @@ export const Main = ({focused}) => {
         headerShown: false,
         drawerStyle: {
           backgroundColor: '#12376B',
-          width: '75%',  
-        },  
+          width: '75%',
+        },
       }}
-      drawerContent={(props) => <CustomDrawer {...props} {...focused} />}
-      >
+      drawerContent={props => <CustomDrawer {...props} {...focused} />}>
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Rewards" component={Rewards} />
-      <Drawer.Screen name="About" component={About} />
-      <Drawer.Screen name="Ourstore" component={OurStore} />
-      <Drawer.Screen name="News" component={News} />
       <Drawer.Screen name="OTC" component={OTC} />
       <Drawer.Screen name="History" component={History} />
       <Drawer.Screen name="CardDiscount" component={CardDiscount} />
@@ -49,7 +41,6 @@ export const Main = ({focused}) => {
       <Drawer.Screen name="Category" component={Category} />
       <Drawer.Screen name="MyCart" component={MyCart} />
       <Drawer.Screen name="BrandScreen" component={BrandScreen} />
-
     </Drawer.Navigator>
   );
 };

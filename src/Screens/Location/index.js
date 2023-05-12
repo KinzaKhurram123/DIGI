@@ -14,12 +14,6 @@ import {primary_location_icon} from '../../assets/icons';
 import Buttons from '../../Components/Buttons/buttons';
 
 const Location = ({navigation}) => {
-  const [region, setRegion] = useState({
-    latitude: 51.5079145,
-    longitude: -0.0899163,
-    latitudeDelta: 0.01,
-    longitudeDelta: 0.01,
-  });
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
@@ -27,6 +21,7 @@ const Location = ({navigation}) => {
         title={'Confirm Deliver Location'}
         style={{paddingTop: SIZES.padding * 1.3}}
         titleStyle={{marginTop: SIZES.padding * 1.3}}
+        isprofile={false}
       />
       <View style={styles.main_view}>
         <View style={styles.map_view}>

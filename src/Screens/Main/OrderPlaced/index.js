@@ -21,6 +21,7 @@ const OrderPlaced = ({navigation}) => {
         onPressIcon={() => navigation.goBack()}
         isBackIcon={false}
         isDrawer={false}
+        isprofile={false}
       />
       <View style={styles.main_view}>
         <ScrollView

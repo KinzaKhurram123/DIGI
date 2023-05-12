@@ -90,7 +90,6 @@ export default function MedicianA_Z({navigation}) {
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
         title={'Medicain A_Z'}
-        isDrawer={false}
         onpresscart={() => navigation.navigate('MyCart')}
         onPressIcon={() => navigation.goBack()}
       />

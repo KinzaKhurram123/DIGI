@@ -1,7 +1,7 @@
 import { StyleSheet,TouchableOpacity, Text, View,Image } from 'react-native'
 import React from 'react'
 import { COLORS, FONTS, SIZES } from '../../../Components/Constant'
-import { add_round_icon } from '../../../assets/icons'
+import { add_red_icon, add_round_icon } from '../../../assets/icons'
 import { Icon } from '../../../Components'
 
 const SingleBrandView = ({onPress,image2, onPressAdd,price,name}) => {
@@ -15,7 +15,7 @@ const SingleBrandView = ({onPress,image2, onPressAdd,price,name}) => {
         <Text style={styles.price}>{'Rs' + price}</Text>
       </View>
       <TouchableOpacity onPress={onPressAdd} style={styles.add_view}>
-        <Icon name={add_round_icon} />
+        <Icon name={add_red_icon} />
       </TouchableOpacity>
     </TouchableOpacity>
   )
