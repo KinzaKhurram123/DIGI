@@ -14,6 +14,12 @@ import {primary_location_icon} from '../../assets/icons';
 import Buttons from '../../Components/Buttons/buttons';
 
 const Location = ({navigation}) => {
+  const [region, setRegion] = useState({
+    latitude: 51.5079145,
+    longitude: -0.0899163,
+    latitudeDelta: 0.01,
+    longitudeDelta: 0.01,
+  });
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader

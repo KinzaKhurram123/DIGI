@@ -111,6 +111,9 @@ export default function Home({navigation}) {
             </TouchableOpacity>
           </View>
           <View>
+            <View>
+              <Image source={images.slider_image_2}/>
+            </View>
             <View style={styles.heading_view}>
               <Text style={styles.heading_text}>Brandes</Text>
             </View>

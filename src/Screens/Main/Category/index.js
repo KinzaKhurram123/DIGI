@@ -142,7 +142,7 @@ const Category = ({navigation}) => {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.tab_view}
-              onPress={() => setBtnType('Delivery')}>
+              onPress={() => navigation.navigate('OTC')}>
               <Text
                 style={
                   btnType === 'Delivery'
