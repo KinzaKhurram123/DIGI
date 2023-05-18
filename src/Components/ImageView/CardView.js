@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   Button,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import {COLORS, FONTS, images, SIZES} from '../Constant';
@@ -18,16 +18,18 @@ import {
   substract_round_icon,
 } from '../../assets/icons';
 import Buttons from '../Buttons/buttons';
-import { Icon } from '..';
+import {Icon} from '..';
 
 const CardView = ({onPress}) => {
   return (
     <SafeAreaView style={styles.safe_area}>
-      <View style={{height: SIZES.padding, marginTop: SIZES.padding}} />
+      {/* <Image
+      resizeMethod='true'
+       source={images.Augmentin2}/> */}
+      <View style={{height: SIZES.padding, marginTop: SIZES.padding * 5}} />
       <View style={styles.main_view}>
         <View style={styles.card_view}>
           <View style={styles.card_left_view}>
-            {/* <SingleCard /> */}
             <View
               style={{
                 flex: 1,
@@ -97,7 +99,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: SIZES.padding,
     justifyContent: 'flex-end',
-    padding: SIZES.padding * 10,
+    padding: SIZES.padding,
     backgroundColor: COLORS.white,
   },
   card_view: {

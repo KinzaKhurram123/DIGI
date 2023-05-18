@@ -19,6 +19,8 @@ import {FlatList} from 'react-native-gesture-handler';
 import {Image} from 'react-native-svg';
 import SingleCardImageView from '../../../Components/ImageView/SingleImageCardView';
 import SIngleProductView from './component/SIngleProductView';
+import DropDownPicker from 'react-native-dropdown-picker';
+
 const categories_type = [
   {
     id: 1,
@@ -80,6 +82,14 @@ const Category = ({navigation}) => {
   const listRef = useRef();
   const [btnType, setBtnType] = useState('General');
   const [showDesc, setShowDesc] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState(null);
+  const [items, setItems] = useState([
+    {label: 'Price:', value: 'High to low'},
+    {label: 'price:', value: 'Low to High'},
+    {label: 'Alphabatically:', value: '(A-Z)'},
+  ]);
+
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
@@ -87,6 +97,7 @@ const Category = ({navigation}) => {
         isDrawer={true}
         onPressIcon={() => navigation.openDrawer()}
         isprofile={true}
+        onPresRightIcon={() => navigation.goBack()}
       />
       <View style={styles.main_view}>
         <View style={styles.filter_view}>
@@ -120,80 +131,117 @@ const Category = ({navigation}) => {
               name={small_down_arrow_icon}
             />
           </View>
+          {/* <DropDownPicker
+             open={open}
+           value={value}
+            items={items}
+            setOpen={setOpen}
+            setValue={setValue}
+            setItems={setItems}
+          /> */}
         </View>
         <View style={styles.tab_row}>
           <ScrollView showsHorizontalScrollIndicator={true} horizontal>
             <TouchableOpacity
-              style={styles.tab_view}
-              onPress={() => setBtnType('General')}>
+              activeOpacity={1}
+              style={[
+                styles.tab_view,
+                {
+                  borderBottomColor:
+                    btnType === 'Gernal'
+                      ? COLORS.secondary
+                      : COLORS.border_grey,
+                },
+              ]}
+              onPress={() => setBtnType('Gernal')}>
               <Text
-                style={
-                  btnType === 'General'
-                    ? styles.tab_view_text
-                    : styles.tab_view_text_inactive
-                }>
+                style={[
+                  styles.tab_text,
+                  {
+                    color:
+                      btnType === 'Gernal'
+                        ? COLORS.primary
+                        : COLORS.text_placeholder,
+                  },
+                ]}>
                 PERSONAL CARE
               </Text>
-              {btnType === 'General' ? (
-                <View style={styles.border_active} />
-              ) : (
-                <View style={styles.border_inactive} />
-              )}
             </TouchableOpacity>
             <TouchableOpacity
-              style={styles.tab_view}
-              onPress={() => navigation.navigate('OTC')}>
+              activeOpacity={1}
+              style={[
+                styles.tab_view,
+                {
+                  borderBottomColor:
+                    btnType === 'OTC' ? COLORS.secondary : COLORS.border_grey,
+                },
+              ]}
+              onPress={() => setBtnType('OTC')}>
               <Text
-                style={
-                  btnType === 'Delivery'
-                    ? styles.tab_view_text
-                    : styles.tab_view_text_inactive
-                }>
-                OTC AND HEALTH NEED
+                style={[
+                  styles.tab_text,
+                  {
+                    color:
+                      btnType === 'OTC'
+                        ? COLORS.primary
+                        : COLORS.text_placeholder,
+                  },
+                ]}>
+                OTC & HEALTH NEED
               </Text>
-              {btnType === 'Delivery' ? (
-                <View style={styles.border_active} />
-              ) : (
-                <View style={styles.border_inactive} />
-              )}
             </TouchableOpacity>
             <TouchableOpacity
-              style={styles.tab_view}
+              activeOpacity={1}
+              style={[
+                styles.tab_view,
+                {
+                  borderBottomColor:
+                    btnType === 'Order' ? COLORS.secondary : COLORS.border_grey,
+                },
+              ]}
               onPress={() => setBtnType('Order')}>
               <Text
-                style={
-                  btnType === 'Order'
-                    ? styles.tab_view_text
-                    : styles.tab_view_text_inactive
-                }>
-                BABY AND MOTHER CARE
+                style={[
+                  styles.tab_text,
+                  {
+                    color:
+                      btnType === 'Order'
+                        ? COLORS.primary
+                        : COLORS.text_placeholder,
+                  },
+                ]}>
+                BABY & MOTHER CARE
               </Text>
-              {btnType === 'Order' ? (
-                <View style={styles.border_active} />
-              ) : (
-                <View style={styles.border_inactive} />
-              )}
             </TouchableOpacity>
             <TouchableOpacity
-              style={styles.tab_view}
-              onPress={() => setBtnType('Order')}>
+              activeOpacity={1}
+              style={[
+                styles.tab_view,
+                {
+                  borderBottomColor:
+                    btnType === 'supplements'
+                      ? COLORS.secondary
+                      : COLORS.border_grey,
+                },
+              ]}
+              onPress={() => setBtnType('supplements')}>
               <Text
-                style={
-                  btnType === 'Order'
-                    ? styles.tab_view_text
-                    : styles.tab_view_text_inactive
-                }>
+                style={[
+                  styles.tab_text,
+                  {
+                    color:
+                      btnType === 'supplements'
+                        ? COLORS.primary
+                        : COLORS.text_placeholder,
+                  },
+                ]}>
                 NUTRATION SUPLEMENTS
               </Text>
-              {btnType === 'Order' ? (
-                <View style={styles.border_active} />
-              ) : (
-                <View style={styles.border_inactive} />
-              )}
             </TouchableOpacity>
           </ScrollView>
         </View>
-        <View style={{padding: SIZES.padding * 0.8}} />
+        <View style={{padding: SIZES.padding * 0.7}} />
+
         <FlatList
           horizontal
           data={categories_type}
@@ -205,7 +253,7 @@ const Category = ({navigation}) => {
           })}
           onScrollToIndexFailed={() => {}}
           showsHorizontalScrollIndicator={false}
-          style={{paddingHorizontal: SIZES.padding}}
+          style={{paddingHorizontal: SIZES.padding * 2}}
           ListFooterComponent={<View style={{width: SIZES.padding2}} />}
           renderItem={({item}) => {
             return (
@@ -221,6 +269,7 @@ const Category = ({navigation}) => {
           data={product_list}
           columnWrapperStyle={{justifyContent: 'center'}}
           numColumns={2}
+          style={{paddingHorizontal: SIZES.padding}}
           keyExtractor={item => item?.id}
           ListFooterComponent={<View style={{height: SIZES.padding * 1.5}} />}
           renderItem={({item}) => {

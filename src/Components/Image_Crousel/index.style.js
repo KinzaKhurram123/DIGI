@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     height:10,
   },
   active_dot: {
-    width: 10,
+    width: 20,
     height: 10,
     borderRadius: 5,
     margin: 0,

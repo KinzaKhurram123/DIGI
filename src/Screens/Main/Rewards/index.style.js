@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { COLORS, FONTS, SIZES } from '../../../Components/Constant';
+import {StyleSheet} from 'react-native';
+import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
 
 export const styles = StyleSheet.create({
   safe_area: {
@@ -8,49 +8,56 @@ export const styles = StyleSheet.create({
   main_view: {
     flex: 1,
     paddingTop: SIZES.padding,
-    backgroundColor: COLORS.white
-
+    backgroundColor: COLORS.white,
+  },
+  cards: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
   },
   balance_text: {
-    ...FONTS.Regular18,
+    ...FONTS.Regular12,
     marginTop: SIZES.padding2,
-       alignSelf: "center"
-
+    alignSelf: 'center',
+    color: COLORS.primary,
   },
   points_text: {
-    ...FONTS.Bold26,
-    alignSelf: "center"
-
+    ...FONTS.Bold19,
+    alignSelf: 'center',
+    color: COLORS.primary,
   },
   expiring_points_text: {
-    ...FONTS.Regular16,
-    alignSelf: "center"
+    ...FONTS.Regular14,
+    alignSelf: 'center',
+    color:COLORS.primary
   },
   tab_row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: SIZES.padding,
-    width: "100%",
-    paddingHorizontal: SIZES.padding
+    width: '60%',
+    paddingHorizontal: SIZES.padding,
   },
   tab_view: {
-    width: "100%",
+    width: '100%',
     borderBottomWidth: 2,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingBottom: SIZES.padding2 * 0.8,
-    borderBottomColor: COLORS.border_grey
+    borderBottomColor: COLORS.border_grey,
   },
   tab_text: {
-    ...FONTS.Regular13
+    ...FONTS.Regular13,
+    width: '100%',
+    color: COLORS.primary,
   },
   card_view: {
     marginTop: SIZES.padding,
-    width: "90%",
-    alignSelf: "center",
+    width: '90%',
+    alignSelf: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: "center",
+    alignItems: 'center',
     backgroundColor: COLORS.white,
     paddingHorizontal: SIZES.padding,
     paddingVertical: SIZES.padding2,
@@ -65,26 +72,28 @@ export const styles = StyleSheet.create({
   },
   card_price: {
     textAlign: 'left',
-    ...FONTS.Medium19,
+    ...FONTS.Medium16,
+    color: COLORS.primary,
   },
   card_points: {
     textAlign: 'left',
-    ...FONTS.Medium12,
+    ...FONTS.Medium11,
     color: COLORS.Light_blue,
+    color: COLORS.primary,
   },
   card_btn: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     paddingHorizontal: SIZES.padding2 * 0.8,
     backgroundColor: COLORS.secondary,
     height: 30,
-    borderRadius: SIZES.padding
+    borderRadius: SIZES.padding,
   },
   btn_text: {
     color: COLORS.white,
-    ...FONTS.Regular13,
+    ...FONTS.Regular11,
     marginLeft: SIZES.padding2 * 0.8,
-    marginTop:SIZES.padding2 * 0.2
-  }
+    marginTop: SIZES.padding2 * 0.2,
+  },
 });

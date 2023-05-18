@@ -5,5 +5,4 @@ export {default as CommonHeader} from "./common/index";
 export {default as SingleImageCardView} from "./ImageView/SingleImageCardView";
 export {default as SingleCategoryView} from "./ImageView/SingleImageCategoryVeiw";
 export {default as SingleOtcView} from "./ImageView/SingleOtcView";
-export {default as CarouselCards} from "./Image_Craousal";
-
+export {default as Image_Craousal} from "./Image_Crousel/index"

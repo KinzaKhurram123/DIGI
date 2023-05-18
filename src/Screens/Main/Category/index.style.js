@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   safe_area: {
     flex: 1,
   },
-  main_view: {
+main_view: {
     flex: 1,
     backgroundColor: COLORS.white,
   },
@@ -77,6 +77,7 @@ export const styles = StyleSheet.create({
   tab_text: {
     ...FONTS.Regular14,
     color: COLORS.text_white,
+    textAlign:"center"
   },
   heading: {
     ...FONTS.Regular17,
@@ -149,6 +150,6 @@ export const styles = StyleSheet.create({
     color: COLORS.primary,
   },
   margin:{
-    paddingBottom: SIZES.padding*3.5
+    paddingBottom: SIZES.padding*4.5
   }
 });

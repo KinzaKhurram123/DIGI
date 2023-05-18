@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   image_view: {
-    height: 120,
-    width: '100%',
+    height: 150,
+    width: '120%',
   },
   image: {
     width: '100%',

@@ -13,10 +13,10 @@ export default function Start({navigation}) {
   return (
     <Container>
       <CommonHeader isIcon={false} isBackIcon={false}/>
-      <View style={{flex: 1, paddingHorizontal: 20}}>
-        <View style={{height: 40}} />
+      <View style={{flex: 1, paddingHorizontal: SIZES.padding*1.5}}>
+        <View style={{height: 50}} />
         <Logo />
-        <View style={{height: SIZES.padding * 3}} />
+        <View style={{height: SIZES.padding * 4}} />
         <Buttons
           buttonText="Login"
           style={styles.btn}
@@ -40,5 +40,6 @@ const styles = StyleSheet.create({
   },
   btn: {
     backgroundColor: COLORS.secondary,
+  
   },
 });

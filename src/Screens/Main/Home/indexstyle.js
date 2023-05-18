@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     height: SIZES.padding * 2,
   },
   flatlist: {
-    marginLeft: SIZES.padding,
+    margin: SIZES.padding2-3,
   },
   heading_view: {
     width: '100%',
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
     padding: SIZES.padding,
   },
   heading_text: {
-    ...FONTS.Bold27,
+    ...FONTS.Bold22,
     color:COLORS.primary
   },
   title: {
@@ -57,5 +57,6 @@ export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingBottom:SIZES.padding
   },
 });

@@ -7,15 +7,28 @@ import {images, SIZES} from '../../../Components/Constant';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {add_round_icon, substract_round_icon} from '../../../assets/icons';
 import Buttons from '../../../Components/Buttons/buttons';
-import {ImagePicker} from 'react-native-image-picker';
-
-const OTC = ({navigation , props}) => {
+import ImagePicker from 'react-native-image-crop-picker';
+const OTC = ({navigation, props}) => {
+  const upload = () => {
+    ImagePicker.openCamera({
+      width: 300,
+      height: 400,
+      cropping: true,
+    }).then(image => {
+      console.log(image);
+    });
+  };
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
         title={'OTC and Health needs'}
         onPressIcon={() => navigation.goBack()}
         isDrawer={false}
+        isprofile={false}
+        style={{
+          borderBottomEndRadius: SIZES.padding,
+          borderBottomStartRadius: SIZES.padding,
+        }}
       />
       <View style={styles.main_view}>
         <View style={styles.card_view}>
@@ -24,7 +37,7 @@ const OTC = ({navigation , props}) => {
               image={images.medicine}
               style={styles.card_image}
             />
-            <View
+            <View                      
               style={{
                 flex: 1,
                 justifyContent: 'space-between',
@@ -55,8 +68,11 @@ const OTC = ({navigation , props}) => {
           </View>
         </View>
         <Buttons
+          ismodle={true}
+          onPress={upload}
           buttonText={'Upload Prescription'}
           style={styles.btn}
+         
         />
         <View style={styles.text_row}>
           <Text style={styles.desc}>Don’t have a prescription,</Text>

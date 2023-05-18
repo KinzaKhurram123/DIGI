@@ -7,7 +7,7 @@ const Logo = ({style}) => {
     <View style={[styles.logo, style]}>
       <Image
         source={images.black_logo}
-        style={{height: 120}}
+        style={{height: 100}}
         resizeMode="contain"
       />
     </View>

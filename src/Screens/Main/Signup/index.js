@@ -14,7 +14,7 @@ import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import CommonStyles from '../../../Utils/CommonStyles';
 import Buttons from '../../../Components/Buttons/buttons';
 import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
-import {Icon, Header} from '../../../Components';
+import {Icon, Header, CommonHeader} from '../../../Components';
 import {
   back_arrow_icon,
   Card_icon_secondary,
@@ -31,10 +31,7 @@ export default function Signup({navigation}) {
 
   return (
     <Container>
-      <View style={styles.blueback}>
-        {/* <Header   isIcon={false}
-        title={"Sign Up"}
-        onPressIcon={() => navigation.goBack()} /> */}
+      {/* <View style={styles.blueback}>
         <TouchableOpacity
           style={{alignContent: 'space-between', padding: 12}}
           onPress={() => navigation.navigate('Start')}>
@@ -42,7 +39,12 @@ export default function Signup({navigation}) {
         </TouchableOpacity>
 
         <Text style={CommonStyles.title}>Signup</Text>
-      </View>
+      </View> */}
+      <CommonHeader
+        onPresRightIcon={() => navigation.goBack()}
+        title={'Signup'}
+        isIcon={false}
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
         <InnerContainer>
           <View style={styles.row}>
@@ -105,14 +107,14 @@ export default function Signup({navigation}) {
               <View style={{height: 40}} />
               <View style={styles.container}>
                 <View style={styles.checkboxContainer}>
-                  <CustomCheckBox
+                  {/* <CustomCheckBox
                     style={styles.check_box}
                     isChecked={isCheck}
                     setIsChecked={() => setIsCheck(!isCheck)}
                     checkedColor={COLORS.secondary}
                     uncheckedBorderColor={COLORS.secondary}
                     unCheckedColor={'#F3F5F7'}
-                  />
+                  /> */}
                   <View style={{padding: 1}}>
                     <Text>
                       <Text style={styles.label}>
@@ -149,9 +151,9 @@ export default function Signup({navigation}) {
                       style={[
                         styles.social_sign_up_text,
                         {color: COLORS.secondary},
-                      ]}
-                      text="Google"
-                    />
+                      ]}>
+                      Google
+                    </Text>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.item}>
                     <View
@@ -162,9 +164,9 @@ export default function Signup({navigation}) {
                       <Icon name={facebook_icon} />
                     </View>
                     <Text
-                      style={[styles.social_sign_up_text, {color: '#3B5999'}]}
-                      text="Facebook"
-                    />
+                      style={[styles.social_sign_up_text, {color: '#3B5999'}]}>
+                      Facebook
+                    </Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -259,11 +261,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    ...FONTS.Regular15,
+    ...FONTS.Regular13,
     color: COLORS.primary,
   },
   text_red: {
-    ...FONTS.Bold14,
+    ...FONTS.Bold13,
     color: COLORS.secondary,
   },
   phone_code: {width: '25%', borderRadius: 0},

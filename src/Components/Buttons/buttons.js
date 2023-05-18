@@ -1,7 +1,7 @@
-import React from 'react';
-import { COLORS, FONTS, SIZES } from '../Constant';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { Icons } from '../index';
+import React,{useState} from 'react';
+import {COLORS, FONTS, SIZES} from '../Constant';
+import {Modal, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Icons} from '../index';
 
 const Buttons = ({
   style,
@@ -12,12 +12,30 @@ const Buttons = ({
   iconStyle,
   isDisabled,
   icon,
+  ismodle,
+  setmodal
 }) => {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <TouchableOpacity
       onPress={onPress}
       style={[styles.container, style]}
       disabled={isDisabled}>
+  {ismodle && (
+    <Modal
+    onPress={() => setModalVisible(true)}
+    animationType='fade'
+    transparent={true}
+    visible={modalVisible}
+    onRequestClose={() => {
+      setModalVisible(!modalVisible);
+    }}
+    >
+      <TouchableOpacity style={[Platform.OS === "ios" ? styles.iOSBackdrop : styles.androidBackdrop, styles.backdrop]} onPress={() => props.setModalVisible(false)}/>
+    </Modal>
+  )
+  }
+
       <View style={[styles.row, icon_view]}>
         <Text style={[styles.defaultText, textStyle]}>{buttonText}</Text>
         {icon && (
@@ -31,12 +49,12 @@ const Buttons = ({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.primary,
-    height: 45,
+    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: SIZES.padding,
     width: '100%',
-    borderRadius:SIZES.padding * 2
+    borderRadius: SIZES.padding * 2,
   },
   row: {
     flexDirection: 'row',

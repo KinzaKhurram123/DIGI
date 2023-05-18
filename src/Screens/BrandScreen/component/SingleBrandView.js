@@ -6,7 +6,7 @@ import { Icon } from '../../../Components'
 
 const SingleBrandView = ({onPress,image2, onPressAdd,price,name}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.main_view}>
+    <TouchableOpacity activeOpacity={1} onPress={onPress} style={styles.main_view}>
         <View style={styles.image_view}>
             <Image source={image2} style={styles.image}/>
         </View>
@@ -51,9 +51,10 @@ const styles = StyleSheet.create({
         color: COLORS.secondary,
       },
       image: {
-        height: '100%',
-        width: '100%',
+        height: '70%',
+        width: '70%',
         alignSelf: 'center',
+        marginTop:SIZES.padding,
         borderRadius: SIZES.padding2 * 0.8,
       },
       name: {

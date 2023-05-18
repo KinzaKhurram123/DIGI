@@ -14,7 +14,7 @@ const CustomCheckBox = ({
   style,
   textStyle,
   uncheckedBorderColor,
-  checkedBorderColor,
+  checkedBorderColor
 }) => {
   return (
     <CheckBox

@@ -18,7 +18,7 @@ const A_Z = [
         title: 'Acetylcysteine',
         description: 'Pfizer',
         price: '500',
-        image: images.medicine_augmentin,
+        image: images.medicine,
       },
       {
         id: 12,
@@ -91,7 +91,8 @@ export default function MedicianA_Z({navigation}) {
       <CommonHeader
         title={'Medicain A_Z'}
         onpresscart={() => navigation.navigate('MyCart')}
-        onPressIcon={() => navigation.goBack()}
+        onPressIcon={() => navigation.navigate('Main')}
+        isprofile={false}
       />
       <View style={styles.main_view}>
         <IconInputField
@@ -123,6 +124,7 @@ export default function MedicianA_Z({navigation}) {
                       ItemSeparatorComponent={ItemSeperatorView}
                       renderItem={({item}) => (
                         <SingleMedicianView
+                        onPress={() => navigation.navigate('ViewProduct')}
                           style={{
                             width: Dimensions.get('screen').width / 2.5,
                             marginHorizontal: SIZES.padding2,

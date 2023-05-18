@@ -28,28 +28,28 @@ export default function Otp({navigation}) {
     value,
     setValue,
   });
-  const renderCell = ({index, symbol, isFocused}) => {
-    let textChild = null;
-    if (symbol) {
-      textChild = (
-        <MaskSymbol
-          maskSymbol="-"
-          isLastFilledCell={isLastFilledCell({index, value})}>
-          {symbol}
-        </MaskSymbol>
-      );
-    } else if (isFocused) {
-      textChild = <Cursor />;
-    }
-    return (
-      <Text
-        key={index}
-        style={[styles.cell, isFocused && styles.focusCell]}
-        onLayout={getCellOnLayoutHandler(index)}>
-        {textChild}
-      </Text>
-    );
-  };
+  // const renderCell = ({index, symbol, isFocused}) => {
+  //   let textChild = null;
+  //   if (symbol) {
+  //     textChild = (
+  //       <MaskSymbol
+  //         maskSymbol="-"
+  //         isLastFilledCell={isLastFilledCell({index, value})}>
+  //         {symbol}
+  //       </MaskSymbol>
+  //     );
+  //   } else if (isFocused) {
+  //     textChild = <Cursor />;
+  //   }
+  //   return (
+  //     <Text
+  //       key={index}
+  //       style={[styles.cell, isFocused && styles.focusCell]}
+  //       onLayout={getCellOnLayoutHandler(index)}>
+  //       {textChild}
+  //     </Text>
+  //   );
+  // };
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader isIcon={false} onPressIcon={() => navigation.goBack()} />

@@ -5,9 +5,9 @@ import {COLORS, FONTS, images, SIZES} from '../Constant';
 
 const SingleImageCategoryVeiw = ({onPress,name, style, image}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={[styles.main_view, style]}>
+    <TouchableOpacity activeOpacity={1}  onPress={onPress} style={[styles.main_view, style]}>
       <View style={styles.image_view}>
-        <Image source={image} style={{width:"100%" , height: "100%"}} />
+        <Image source={image} style={{width:"70%" , height: "70%"}} />
       </View>
       <View style={styles.text_view}>
         <Text style={styles.title}>{name}</Text>
@@ -20,10 +20,10 @@ export default SingleImageCategoryVeiw;
 
 const styles = StyleSheet.create({
   main_view: {
-    width: 120,
-    padding: SIZES.padding2 * 0.3,
+    width: 100,
+    padding: SIZES.padding2 * 0.2,
     backgroundColor: COLORS.white,
-    borderRadius: SIZES.padding2 * 1.5,
+    borderRadius: SIZES.padding2 * 1.4,
     marginRight: SIZES.padding2,
   },
   image_view: {
@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     marginTop: SIZES.padding2 * 0.4,
   },
   title: {
-    ...FONTS.Regular13,
+    ...FONTS.Regular12,
     alignSelf: 'center',
+    color: COLORS.primary
   },
 });

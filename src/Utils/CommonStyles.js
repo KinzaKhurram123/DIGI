@@ -14,7 +14,7 @@ export default CommonStyles = {
   },
   title: {
     color: COLORS.white,
-    ...FONTS.Regular30,
+    ...FONTS.Regular24,
     paddingBottom: hp("3"),
   },
   cardTitle: {

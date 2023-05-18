@@ -95,6 +95,7 @@ android {
 
     namespace "com.digipills"
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId "com.digipills"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion

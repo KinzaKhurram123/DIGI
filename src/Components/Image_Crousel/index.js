@@ -1,24 +1,29 @@
-import {View, Text, Dimensions} from 'react-native';
+import {Image, Dimensions, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
-import {styles} from './index.style';
-import {Image} from 'react-native-svg';
-import {COLORS, images} from '../Constant';
-import {Carousel, Pagination} from 'react-native-reanimated-carousel';
-
-const Carousel_Image = ({array}) => {
-  const [index, setIndex] = useState(0);
-  const renderItem = ({item}) => {
-    return (
-      <View style={styles.slide}>
-        <Image source={item} resizeMode="cover" style={styles.image} />
-      </View>
-    );
-  };
+import Carousel, {Pagination} from 'react-native-snap-carousel';
+import {COLORS, images, SIZES} from '../Constant';
+import { styles } from './index.style';
+ const sliderArray = [
+  images.slider_image_2,
+  images.slider_image,
+  images.slider_image_2,
+];
+const renderItem = ({item}) => {
   return (
-    <>
+    <View style={styles.slide}>
+      <Image source={item} resizeMode="cover" style={styles.image} />
+    </View>
+  );
+};
+
+const Image_Crousel = ({array}) => {
+  const [index, setIndex] = useState(0);
+
+  return (
+    <View style={{paddingTop:SIZES.padding}}>
       <Carousel
         style={{height: '100%', alignSelf: 'center'}}
-        data={array}
+        data={sliderArray}
         renderItem={renderItem}
         sliderWidth={Dimensions.get('screen').width}
         itemWidth={Dimensions.get('screen').width}
@@ -32,10 +37,12 @@ const Carousel_Image = ({array}) => {
         activeDotIndex={index}
         dotStyle={styles.active_dot}
         inactiveDotColor={COLORS.white}
-        dotColor={COLORS.white}
+        dotColor={COLORS.black}
         inactiveDotStyle={styles.inactive_dot}
       />
-    </>
+    </View>
   );
 };
-export default Carousel_Image;
+
+export default Image_Crousel;
+

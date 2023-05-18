@@ -1,4 +1,4 @@
-import {StyleSheet,TouchableOpacity, Text, View,Image} from 'react-native';
+import {StyleSheet, TouchableOpacity, Text, View, Image} from 'react-native';
 import React from 'react';
 import {styles} from './index.style';
 import {Icon, IconInputField} from '../index';
@@ -34,7 +34,7 @@ const CommonHeader = ({
   searchValue,
   edit,
   onpressEdit,
-  onpresscart=true
+  onpresscart = true,
 }) => {
   return (
     <View style={[styles.main_view, style]}>
@@ -48,22 +48,24 @@ const CommonHeader = ({
           <Text style={[styles.title, titleStyle]}>{title}</Text>
         </View>
         {edit && (
-          <TouchableOpacity onpress={onpressEdit}>
+          <TouchableOpacity activeOpacity={1} onpress={onpressEdit}>
             <Icon name={edit_icon} />
           </TouchableOpacity>
         )}
         {isIcon && (
           <>
-            <TouchableOpacity onpress={onPressNotification}>
+            <TouchableOpacity activeOpacity={1} onpress={onPressNotification}>
               <Icon name={notification_icon} />
             </TouchableOpacity>
             <TouchableOpacity
+              activeOpacity={1}
               style={{marginLeft: SIZES.padding}}
               onpress={onpresscart}>
               <Icon name={top_right_icon} />
             </TouchableOpacity>
             {isprofile && (
               <TouchableOpacity
+                activeOpacity={1}
                 style={{marginLeft: SIZES.padding}}
                 onPress={onPressUser}>
                 <Image
@@ -78,7 +80,7 @@ const CommonHeader = ({
       </View>
 
       {hasSearchBar && (
-        <TouchableOpacity onPress={onPressSearchBar} disabled={isSearchable}>
+        <TouchableOpacity activeOpacity={1} onPress={onPressSearchBar} disabled={isSearchable}>
           <IconInputField
             rightIcon={close_black_icon}
             icon={search_icon_blue}

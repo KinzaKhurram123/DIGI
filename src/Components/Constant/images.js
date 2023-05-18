@@ -49,6 +49,7 @@ import  Amonxil from "../../assets/images/medicines/Amonxil.png"
 import Anrod  from "../../assets/images/medicines/Anrod.png"
 import Augmentin2  from "../../assets/images/medicines/Augmentin2.png"
 import Avamys  from "../../assets/images/medicines/Avamys.png"
+import logo_fine from "../../assets/images/logos/fine.png" 
 
 export default {
   profile,
@@ -89,6 +90,7 @@ export default {
   logos_abbott,
   logos_gsk,
   logos_nestle,
+  logo_fine,
   medicine_augmentin,
   medicine_paracetamol,
   profile_image,

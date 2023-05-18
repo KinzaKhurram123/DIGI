@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     marginTop: -SIZES.padding,
   },
   image_view: {
-    width: '80%',
+    width: '60%',
     height: 75,
   },
   image: {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   text: {
-    ...FONTS.Regular23,
+    ...FONTS.Regular21,
     color: COLORS.text_white,
     textAlign: 'center',
     marginTop: SIZES.padding * 1.3,

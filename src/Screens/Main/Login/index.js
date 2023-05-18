@@ -12,8 +12,13 @@ import Container from '../../../Components/Container/Container';
 import InnerContainer from '../../../Components/Container/InnerContainer';
 import Buttons from '../../../Components/Buttons/buttons';
 import CommonStyles from '../../../Utils/CommonStyles';
-import {back_arrow_icon, mobile_icon, phone_icon} from '../../../assets/icons';
-import {Icon, IconInputField} from '../../../Components';
+import {
+  back_arrow_icon,
+  mobile_icon,
+  mobile_icon_gray,
+  phone_icon,
+} from '../../../assets/icons';
+import {CommonHeader, Icon, IconInputField} from '../../../Components';
 import {COLORS, SIZES} from '../../../Components/Constant';
 
 ButtonAlert = navigation =>
@@ -28,14 +33,7 @@ ButtonAlert = navigation =>
 export default function Login({navigation}) {
   return (
     <Container>
-      <View style={styles.blueback}>
-        <TouchableOpacity
-          style={{alignContent: 'space-between', padding: 12}}
-          onPress={() => navigation.navigate('Start')}>
-          <Icon name={back_arrow_icon} />
-        </TouchableOpacity>
-        <Text style={CommonStyles.title}>Login</Text>
-      </View>
+      <CommonHeader onPresRightIcon={()=> navigation.goBack()} title={'Login'} isIcon={false} style={styles.view} />
       <View style={{flex: 1, paddingHorizontal: 20}}>
         <ScrollView>
           <InnerContainer>
@@ -49,7 +47,8 @@ export default function Login({navigation}) {
                   // value={values.number}
                   maxLength={10}
                   keyboardType="numeric"
-                  icon={phone_icon}
+                  // leftIcon={}
+        
                 />
               </View>
               <View style={{height: 50}} />
@@ -80,5 +79,9 @@ const styles = StyleSheet.create({
   },
   btn: {
     backgroundColor: COLORS.secondary,
+  },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
   },
 });

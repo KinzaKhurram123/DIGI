@@ -21,7 +21,7 @@ const SingleMedicianView = ({
   descStyle,
 }) => {
   return (
-    <TouchableOpacity style={styles.main_view} onPress={onPress}>
+    <TouchableOpacity activeOpacity={1} style={styles.main_view} onPress={onPress}>
       <View style={styles.image_view}>
         <Image
           style={[styles.image, imageStyle]}
@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
     borderTopRightRadius: SIZES.padding2,
   },
   image: {
-    height: '100%',
-    width: '100%',
+    height: '80%',
+    width: '80%',
     alignSelf: 'center',
   },
   icon: {
@@ -74,12 +74,12 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'left',
-    ...FONTS.Regular14,
+    ...FONTS.Regular12,
     marginTop: SIZES.padding2 * 0.5,
   },
   description: {
     textAlign: 'left',
-    ...FONTS.Bold13,
+    ...FONTS.Bold11,
     marginTop: SIZES.padding2 * 0.1,
   },
   row: {
@@ -89,15 +89,15 @@ const styles = StyleSheet.create({
     marginTop: -SIZES.padding2 * 0.5,
   },
   price: {
-    ...FONTS.Bold15,
+    ...FONTS.Bold13,
     fontWeight: '600',
     marginLeft: SIZES.padding2 * 0.5,
     color: COLORS.secondary,
   },
   add_view: {
     backgroundColor: '#DD3333',
-    height: 30,
-    width: 30,
+    height: 25,
+    width: 25,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: SIZES.padding2,

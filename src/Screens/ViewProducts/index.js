@@ -7,17 +7,18 @@ import SingleCardImageView from '../../Components/ImageView/SingleImageCardView'
 import Buttons from '../../Components/Buttons/buttons';
 import {ScrollView} from 'react-native-gesture-handler';
 
-const ViewProduct = ({ navigation }) => {
+const ViewProduct = ({navigation}) => {
   return (
     <SafeAreaView image={images.background_image_two} style={styles.safe_area}>
       <CommonHeader
+        isIcon={false}
         title={'View Product'}
         onPressIcon={() => navigation.goBack()}
       />
       <View style={styles.main_view}>
-        <ScrollView style={styles.main_view}
-        showsVerticalScrollIndicator={false}>
-
+        <ScrollView
+          style={styles.main_view}
+          showsVerticalScrollIndicator={false}>
           <View
             style={{
               paddingHorizontal: SIZES.padding,
