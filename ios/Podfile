@@ -21,7 +21,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'DIGIPILLS' do
+target 'DigiPill_App' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -43,7 +43,7 @@ target 'DIGIPILLS' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'DIGIPILLSTests' do
+  target 'DigiPill_AppTests' do
     inherit! :complete
     # Pods for testing
   end

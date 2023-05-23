@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "DIGIPILLS.app"
-               BlueprintName = "DIGIPILLS"
-               ReferencedContainer = "container:DIGIPILLS.xcodeproj">
+               BuildableName = "DigiPill_App.app"
+               BlueprintName = "DigiPill_App"
+               ReferencedContainer = "container:DigiPill_App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "DIGIPILLSTests.xctest"
-               BlueprintName = "DIGIPILLSTests"
-               ReferencedContainer = "container:DIGIPILLS.xcodeproj">
+               BuildableName = "DigiPill_AppTests.xctest"
+               BlueprintName = "DigiPill_AppTests"
+               ReferencedContainer = "container:DigiPill_App.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "DIGIPILLS.app"
-            BlueprintName = "DIGIPILLS"
-            ReferencedContainer = "container:DIGIPILLS.xcodeproj">
+            BuildableName = "DigiPill_App.app"
+            BlueprintName = "DigiPill_App"
+            ReferencedContainer = "container:DigiPill_App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "DIGIPILLS.app"
-            BlueprintName = "DIGIPILLS"
-            ReferencedContainer = "container:DIGIPILLS.xcodeproj">
+            BuildableName = "DigiPill_App.app"
+            BlueprintName = "DigiPill_App"
+            ReferencedContainer = "container:DigiPill_App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

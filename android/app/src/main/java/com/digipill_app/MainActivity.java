@@ -1,4 +1,4 @@
-package com.digipills;
+package com.digipill_app;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "DIGIPILLS";
+    return "DigiPill_App";
   }
 
   /**

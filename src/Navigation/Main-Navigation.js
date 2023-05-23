@@ -27,7 +27,7 @@ export const Main = ({focused}) => {
           backgroundColor: '#12376B',
           width: '75%',
         },
-      }}
+      }} 
       drawerContent={props => <CustomDrawer {...props} {...focused} />}>
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Rewards" component={Rewards} />
