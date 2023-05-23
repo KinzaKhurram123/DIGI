@@ -18,7 +18,7 @@ const CustomCheckBox = ({
 }) => {
   return (
     <CheckBox
-      style={styles.checkbox}
+      style={styles}
       rightTextView={
         right_text_view ? (
           right_text_view

@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   main_view: {
     backgroundColor: COLORS.primary,
     paddingTop: SIZES.padding * 2.5,
-    paddingBottom: SIZES.padding * 1.3,
+    paddingBottom: SIZES.padding * 2,
     paddingHorizontal: SIZES.padding,
     // borderBottomEndRadius: SIZES.padding,
     // borderBottomStartRadius: SIZES.padding
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   title: {
-    ...FONTS.Regular21,
+    ...FONTS.Regular20,
     color: COLORS.text_white,
     marginLeft: SIZES.padding2,
   },

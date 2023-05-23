@@ -22,6 +22,7 @@ const OrderPlaced = ({navigation}) => {
         isBackIcon={false}
         isDrawer={false}
         isprofile={false}
+        style={styles.view}
       />
       <View style={styles.main_view}>
         <ScrollView

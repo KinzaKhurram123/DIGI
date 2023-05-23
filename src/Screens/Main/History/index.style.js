@@ -13,7 +13,8 @@ export const styles = StyleSheet.create({
     },
     number: {
         textAlign: "left",
-        ...FONTS.Regular16
+        ...FONTS.Regular14,
+        color:COLORS.primary
     },
     text_row: {
         flexDirection: "row",
@@ -22,20 +23,26 @@ export const styles = StyleSheet.create({
     },
     order_text: {
         width: "50%",
-        ...FONTS.Regular16,
+        ...FONTS.Regular14,
         textAlign: "left",
+        color:COLORS.primary
     },
     order_title: {
         textAlign: "left",
-        ...FONTS.Bold16
+        ...FONTS.Bold14, 
+        color:COLORS.primary
     },
     order_desc: {
         textAlign: "left",
         ...FONTS.Medium14,
-        marginTop:-5
+        marginTop:-5,
+        color:COLORS.primary
     },
     btn:{
         marginTop:SIZES.padding * 3,
         backgroundColor:COLORS.secondary
-    }
+    }, view: {
+        borderBottomEndRadius: SIZES.padding,
+        borderBottomStartRadius: SIZES.padding,
+      },
 })

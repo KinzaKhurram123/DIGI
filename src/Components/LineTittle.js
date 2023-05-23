@@ -3,10 +3,11 @@ import React from 'react'
 import { COLORS, FONTS, SIZES } from './Constant'
 import { Icon } from '.'
 
-const LineTittle = ({style,textStyle, tittle, price , icon, iconStyle}) => {
+const LineTittle = ({style,textStyle,lable, tittle, price , icon, iconStyle}) => {
   return (
     <View style={[styles.mainView, style]}>
       <Text style={[styles.title, textStyle]}>{tittle}</Text>
+      <Text style={styles.title}>{lable}</Text>
       {price && <Text style={styles.price}>{`Rs ${price}`}</Text>}
       <View>
         {icon && <Icon style={[styles.icon, iconStyle]} name={icon}/>}

@@ -1,4 +1,4 @@
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Image, Modal, SafeAreaView,StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {styles} from './index.style';
 import {CommonHeader, Icon} from '../../../Components';
@@ -18,6 +18,11 @@ const OTC = ({navigation, props}) => {
       console.log(image);
     });
   };
+  const [visible, setVisible] = React.useState(false);
+
+  const showModal = () => setVisible(true);
+  const hideModal = () => setVisible(false);
+  const containerStyle = {backgroundColor: 'white', padding: 20};
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
@@ -37,7 +42,7 @@ const OTC = ({navigation, props}) => {
               image={images.medicine}
               style={styles.card_image}
             />
-            <View                      
+            <View
               style={{
                 flex: 1,
                 justifyContent: 'space-between',
@@ -72,7 +77,6 @@ const OTC = ({navigation, props}) => {
           onPress={upload}
           buttonText={'Upload Prescription'}
           style={styles.btn}
-         
         />
         <View style={styles.text_row}>
           <Text style={styles.desc}>Don’t have a prescription,</Text>
@@ -82,6 +86,13 @@ const OTC = ({navigation, props}) => {
           <Text style={styles.desc}>.</Text>
         </View>
       </View>
+      
+      {/* <Modal
+        visible={visible}
+        onDismiss={hideModal}
+        contentContainerStyle={containerStyle}>
+        <Text>Example Modal. Click outside this area to dismiss.</Text>
+      </Modal> */}
     </SafeAreaView>
   );
 };

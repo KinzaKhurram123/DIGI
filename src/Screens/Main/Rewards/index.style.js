@@ -21,6 +21,10 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     color: COLORS.primary,
   },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
+  },
   points_text: {
     ...FONTS.Bold19,
     alignSelf: 'center',

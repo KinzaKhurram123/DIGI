@@ -9,6 +9,10 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
+  },
   main_view: {
     flex: 1,
     backgroundColor: COLORS.white,

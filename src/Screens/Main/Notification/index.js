@@ -54,6 +54,7 @@ const Notification = ({navigation}) => {
         title={'Notification'}
         isIcon={false}
         onPressIcon={() => navigation.goBack()}
+        style={styles.view}
       />
       <View style={styles.main_view}>
         <ScrollView

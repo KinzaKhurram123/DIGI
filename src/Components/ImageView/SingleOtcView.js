@@ -40,9 +40,10 @@ export default SingleOtcView;
 const styles = StyleSheet.create({
   main_view: {
     width: 150,
-    marginRight: SIZES.padding2,
+    marginRight: SIZES.padding,
     alignItems: 'flex-start',
     height: 200,
+    paddingLeft:SIZES.padding2 *0.5,
     backgroundColor: COLORS.white,
   },
   image_view: {
@@ -52,6 +53,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '100%',
+    borderRadius:10
   },
   name: {
     textAlign: 'left',

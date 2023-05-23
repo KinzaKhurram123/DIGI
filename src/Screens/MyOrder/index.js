@@ -54,7 +54,7 @@ const MyOrder= ({navigation}) => {
             quantity={'100'}
             btntext={'Cancle Order'}
           />
-          <Buttons buttonText={'New Order'} style={styles.btn}/>
+          <Buttons buttonText={'New Order'} style={styles.btn} onPress={()=> navigation.navigate('Home')}/>
           <View style={{ height: SIZES.padding }} />
         </ScrollView>
       </View>

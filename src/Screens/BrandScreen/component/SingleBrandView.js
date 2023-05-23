@@ -51,10 +51,9 @@ const styles = StyleSheet.create({
         color: COLORS.secondary,
       },
       image: {
-        height: '70%',
-        width: '70%',
+        height: '80%',
+        width: '80%',
         alignSelf: 'center',
-        marginTop:SIZES.padding,
         borderRadius: SIZES.padding2 * 0.8,
       },
       name: {

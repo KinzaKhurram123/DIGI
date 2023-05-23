@@ -24,6 +24,7 @@ const EditProfile = ({navigation}) => {
         title={'Edit Profile'}
         isIcon={false}
         onPressIcon={() => navigation.goBack()}
+        style={styles.view}
       />
       <View style={styles.main_view}>
         <IconInputField
@@ -72,5 +73,9 @@ const styles = StyleSheet.create({
   btn:{
     marginTop:SIZES.padding * 3,
     backgroundColor:COLORS.secondary
-}
+},
+view: {
+  borderBottomEndRadius: SIZES.padding,
+  borderBottomStartRadius: SIZES.padding,
+},
 });

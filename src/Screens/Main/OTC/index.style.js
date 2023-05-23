@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { COLORS, FONTS, SIZES } from "../../../Components/Constant";
+import {StyleSheet} from 'react-native';
+import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
 
 export const styles = StyleSheet.create({
   safe_area: {
@@ -12,12 +12,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 4,
-    marginBottom:12    
+    marginBottom: 12,
   },
   buttonText: {
     textAlign: 'center',
     fontSize: 15,
-    color: '#fff'
+    color: '#fff',
   },
   main_view: {
     flex: 1,
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderRadius: SIZES.padding,
     padding: SIZES.padding,
-    shadowColor: "rgba(170, 33, 33, 0.6)",
+    shadowColor: 'rgba(170, 33, 33, 0.6)',
     shadowOffset: {
       width: 0,
       height: 2,
@@ -37,12 +37,12 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
     elevation: 4,
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   card_left_view: {
-    flexDirection: "row",
-    alignItems: "flex-start",
+    flexDirection: 'row',
+    alignItems: 'flex-start',
   },
   card_image: {
     width: 80,
@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
   card_content: {
     // marginTop: SIZES.padding2 * 0.2,
 
-    alignItems: "flex-start",
+    alignItems: 'flex-start',
   },
   name_text: {
     ...FONTS.Bold14,
@@ -64,16 +64,16 @@ export const styles = StyleSheet.create({
     marginTop: -SIZES.padding2 * 0.3,
   },
   counter_view: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   number_view: {
-    borderColor: "rgba(9, 33, 67, 0.11)",
+    borderColor: 'rgba(9, 33, 67, 0.11)',
     borderTopWidth: 1,
     borderBottomWidth: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 40,
     height: 30,
   },
@@ -81,7 +81,7 @@ export const styles = StyleSheet.create({
     ...FONTS.Bold12,
   },
   card_price: {
-    color: "#dd3333",
+    color: '#dd3333',
     ...FONTS.Bold18,
   },
   card_price_currency: {
@@ -89,26 +89,27 @@ export const styles = StyleSheet.create({
   },
   desc: {
     ...FONTS.Regular14,
-    textAlign: "left",
+    textAlign: 'left',
     marginTop: SIZES.padding,
   },
   btn: {
     backgroundColor: COLORS.secondary,
   },
   text_row: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   help_text: {
     color: COLORS.secondary,
     marginTop: SIZES.padding,
-    textDecorationLine: "underline",
+    textDecorationLine: 'underline',
   },
   price_container: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     marginTop: SIZES.padding2 * 0.4,
   },
+  containerStyle: {backgroundColor: 'white', padding: 20},
 });

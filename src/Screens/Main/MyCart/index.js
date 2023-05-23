@@ -17,7 +17,7 @@ import CartView from './Component/CartView';
 const MyCart = ({navigation}) => {
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader onPressIcon={() => navigation.goback()} title={'My Cart'} />
+      <CommonHeader style={styles.view} onPressIcon={() => navigation.goback()} title={'My Cart'} />
       <View style={styles.main_view}>
         <View style={{flex: 1}}>
           <CartView/>

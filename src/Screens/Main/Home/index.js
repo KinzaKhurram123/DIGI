@@ -19,6 +19,7 @@ import {
 } from '../../../Components';
 import {styles} from './indexstyle';
 import {CommonActions} from '@react-navigation/native';
+import {search_icon_blue} from '../../../assets/icons';
 const Brandes = [
   images.logos_gsk,
   images.logos_abbott,
@@ -83,29 +84,33 @@ export default function Home({navigation}) {
         isIcon={true}
         isDrawer={true}
         isHome={true}
+        search={search_icon_blue}
         isprofile={true}
+        style={styles.view}
         hasSearchBar={true}
         onPressCross={() => navigation.goBack()}
         onpresscart={() => navigation.navigate('MyCart')}
         onPressSearchBar={() => navigation.navigate('Search')}
       />
-      <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.main_view}>
           <View style={styles.container}>
             <TouchableOpacity
               activeOpacity={1}
               style={styles.btn}
               onPress={() => navigation.navigate('MedicianA_Z')}>
-              <Text>Medician A-Z</Text>
+              <Text style={styles.text}>Medician A-Z</Text>
             </TouchableOpacity>
             <TouchableOpacity
               activeOpacity={1}
               style={styles.btn}
               onPress={() => navigation.navigate('Medician_systemic')}>
-              <Text>Medicine by Systemic Class</Text>
+              <Text style={styles.text}>Medicine by Systemic Class</Text>
             </TouchableOpacity>
           </View>
-          <Image_Craousal />
+        </View>
+        <Image_Craousal />
+        <View style={styles.main_view}>
           <View>
             <View style={styles.heading_view}>
               <Text style={styles.heading_text}>Brandes</Text>
@@ -131,50 +136,50 @@ export default function Home({navigation}) {
               );
             }}
           />
+          <View style={styles.heading_view}>
+            <Text style={styles.heading_text}>Categories</Text>
+          </View>
+          <FlatList
+            style={styles.flatlist}
+            horizontal
+            data={categoriess}
+            keyExtractor={item => item?.id}
+            showsHorizontalScrollIndicator={false}
+            renderItem={({item}) => {
+              return (
+                <SingleCategoryView
+                  image={item.image}
+                  name={item.name}
+                  onPress={() => navigation.navigate('Category')}
+                />
+              );
+            }}
+          />
+          <View style={styles.heading_view}>
+            <Text style={styles.heading_text}>OTC</Text>
+          </View>
+          <FlatList
+            style={styles.flatlist}
+            horizontal
+            data={OTC}
+            showsHorizontalScrollIndicator={false}
+            renderItem={({item}) => {
+              return (
+                <SingleOtcView
+                  name={item.name}
+                  price={item.price}
+                  navigate={() => navigation.navigate('OTC')}
+                  image={item.image}
+                  keyExtractor={item => item?.id}
+                  onPress={() => {
+                    dispatch({type: 'SET_PRESCRIPTION', payload: true});
+                    navigation.navigate('ViewProduct', {data: item});
+                  }}
+                />
+              );
+            }}
+          />
         </View>
-        <View style={styles.heading_view}>
-          <Text style={styles.heading_text}>Categories</Text>
-        </View>
-        <FlatList
-          style={styles.flatlist}
-          horizontal
-          data={categoriess}
-          keyExtractor={item => item?.id}
-          showsHorizontalScrollIndicator={false}
-          renderItem={({item}) => {
-            return (
-              <SingleCategoryView
-                image={item.image}
-                name={item.name}
-                onPress={() => navigation.navigate('Category')}
-              />
-            );
-          }}
-        />
-        <View style={styles.heading_view}>
-          <Text style={styles.heading_text}>OTC</Text>
-        </View>
-        <FlatList
-          style={styles.flatlist}
-          horizontal
-          data={OTC}
-          showsHorizontalScrollIndicator={false}
-          renderItem={({item}) => {
-            return (
-              <SingleOtcView
-                name={item.name}
-                price={item.price}
-                navigate={() => navigation.navigate('OTC')}
-                image={item.image}
-                keyExtractor={item => item?.id}
-                onPress={() => {
-                  dispatch({type: 'SET_PRESCRIPTION', payload: true});
-                  navigation.navigate('ViewProduct', {data: item});
-                }}
-              />
-            );
-          }}
-        />
         <View style={{height: SIZES.padding * 1.2}} />
       </ScrollView>
     </SafeAreaView>

@@ -19,6 +19,10 @@ export const styles = StyleSheet.create({
     borderBottomColor: COLORS.secondary,
     marginRight: SIZES.padding2 * 0.5,
   },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
+  },
   tab_view_inactive: {
     minHeight: 90,
     width: Dimensions.get('screen').width / 2.5,

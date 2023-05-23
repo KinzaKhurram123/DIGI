@@ -11,6 +11,10 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white
 
   },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
+  },
   balance_text: {
     ...FONTS.Regular18,
     marginTop: SIZES.padding2,

@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   safe_area: {
     flex: 1,
   },
-main_view: {
+  main_view: {
     flex: 1,
     backgroundColor: COLORS.white,
   },
@@ -55,10 +55,10 @@ main_view: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: SIZES.padding,
+    padding: SIZES.padding2,
   },
   filter_text: {
-    ...FONTS.Regular12,
+    ...FONTS.Light13,
   },
   tab_row: {
     flexDirection: 'row',
@@ -75,9 +75,9 @@ main_view: {
     height: SIZES.padding * 2.5,
   },
   tab_text: {
-    ...FONTS.Regular14,
-    color: COLORS.text_white,
-    textAlign:"center"
+    ...FONTS.Regular13,
+    color: COLORS.primary,
+    textAlign: 'center',
   },
   heading: {
     ...FONTS.Regular17,
@@ -108,7 +108,7 @@ main_view: {
     paddingBottom: SIZES.padding2 * 0.5,
   },
   tab_view_text_inactive: {
-    color: COLORS.border_grey,
+    color: COLORS.primary,
     ...FONTS.Regular12,
   },
   tab_view_text: {
@@ -149,7 +149,11 @@ main_view: {
   border_inactive: {
     color: COLORS.primary,
   },
-  margin:{
-    paddingBottom: SIZES.padding*4.5
-  }
+  margin: {
+    paddingBottom: SIZES.padding * 0.5,
+  },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
+  },
 });

@@ -17,6 +17,10 @@ export const styles = StyleSheet.create({
     desc: {
         ...FONTS.Regular16,
     },
+    view: {
+        borderBottomEndRadius: SIZES.padding,
+        borderBottomStartRadius: SIZES.padding,
+      },
     image_row: {
         flexDirection: "row",
         alignItems: "center",

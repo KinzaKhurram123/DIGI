@@ -8,10 +8,14 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
+  },
   main_view: {
     flex: 1,
     paddingTop: 0,
-    justifyContent: "space-between",
+    justifyContent:"space-between"
   },
   search_bar: {
     borderRadius: SIZES.padding2,
@@ -26,7 +30,7 @@ export const styles = StyleSheet.create({
     paddingLeft: SIZES.padding,
   },
   title: {
-    ...FONTS.Regular30,
+    ...FONTS.Regular24,
     color: COLORS.Light_black_with_opacity,
     backgroundColor: COLORS.light_gray2,
     textAlign: "left",

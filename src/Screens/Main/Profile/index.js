@@ -14,8 +14,9 @@ const Profile = ({navigation}) => {
       <CommonHeader
         title={'Profile'}
         isIcon={false}
-        edit={true}
+        // edit={true}
         isDrawer={false}
+        style={styles.view}
         onPressIcon={() => navigation.goBack()}
         onpressEdit={() => navigation.navigate('EditProfile')}
       />

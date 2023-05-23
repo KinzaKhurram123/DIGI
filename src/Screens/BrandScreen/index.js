@@ -61,6 +61,7 @@ const BrandScreen = ({navigation}) => {
         isDrawer={true}
         isprofile={true}
         hasSearchBar={true}
+        style={styles.view}
         onPressUser={() => navigation.navigate('Profile')}
         onPressSearchBar={() => navigation.navigate('Search')}
       />
@@ -69,7 +70,7 @@ const BrandScreen = ({navigation}) => {
         showsVerticalScrollIndicator={false}>
         <View style={styles.main_view}>
           <View style={styles.filter_view}>
-            <TouchableOpacity onPress={() =>navigation.navigate('Filter')}>
+            <TouchableOpacity activeOpacity={1} onPress={() =>navigation.navigate('Filter')}>
               <View
                 style={{
                   flexDirection: 'row',

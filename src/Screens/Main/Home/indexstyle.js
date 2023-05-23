@@ -15,12 +15,12 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.white,
   },
-  main_view: {
-    flex: 1,
-  },
+  // main_view: {
+  //   flex: 1,
+  // },
   image_card: {
     height: SIZES.padding * 4.5,
-    width: SIZES.padding * 4.5,
+    width: SIZES.padding * 4.2,
     marginRight: SIZES.padding2,
     padding: SIZES.padding2,
     backgroundColor: COLORS.white,
@@ -29,34 +29,52 @@ export const styles = StyleSheet.create({
     height: SIZES.padding * 2,
   },
   flatlist: {
-    margin: SIZES.padding2-3,
+    margin: SIZES.padding2 - 4,
   },
   heading_view: {
     width: '100%',
     alignItems: 'flex-start',
-    padding: SIZES.padding,
+    padding: SIZES.padding2,
   },
   heading_text: {
-    ...FONTS.Bold22,
-    color:COLORS.primary
+    // ...FONTS.Bold20,
+    fontFamily: 'Poppins',
+    fontWeight:'bold',
+    fontSize: 20,
+    color: COLORS.primary,
+    marginTop: SIZES.padding2,
   },
   title: {
     color: 'white',
     fontSize: 25,
   },
+  text: {
+    color: COLORS.primary,
+    ...FONTS.Light10,
+  },
   main_view: {
     flex: 1,
-    padding: SIZES.padding2,
+    marginTop: SIZES.padding2,
+    marginLeft:SIZES.padding2
   },
   btn: {
     backgroundColor: COLORS.light_gray2,
     paddingHorizontal: SIZES.padding,
-    paddingVertical: SIZES.padding,
+    paddingVertical: SIZES.padding2,
+
     borderRadius: SIZES.padding * 2,
   },
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingBottom:SIZES.padding
+    // paddingBottom:SIZES.padding2,
+    // paddingTop:SIZES.padding2,
+    padding: SIZES.padding2,
+    paddingLeft: SIZES.padding,
+    marginRight: SIZES.padding,
+  },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
   },
 });

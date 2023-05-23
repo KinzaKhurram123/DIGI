@@ -18,6 +18,10 @@ export const styles = StyleSheet.create({
         width: "100%", 
         alignContent:"center"
     },
+    view: {
+        borderBottomEndRadius: SIZES.padding,
+        borderBottomStartRadius: SIZES.padding,
+      },
     title: {
         marginTop: SIZES.padding,
         ...FONTS.Regular18,

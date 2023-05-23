@@ -13,7 +13,8 @@ const ViewProduct = ({navigation}) => {
       <CommonHeader
         isIcon={false}
         title={'View Product'}
-        onPressIcon={() => navigation.goBack()}
+        style={styles.view}
+        onPressIcon={() => navigation.navigate('Category')}
       />
       <View style={styles.main_view}>
         <ScrollView

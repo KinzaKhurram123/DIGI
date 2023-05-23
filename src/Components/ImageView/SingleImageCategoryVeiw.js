@@ -21,10 +21,11 @@ export default SingleImageCategoryVeiw;
 const styles = StyleSheet.create({
   main_view: {
     width: 100,
-    padding: SIZES.padding2 * 0.2,
+    padding: SIZES.padding2 * 0.1,
     backgroundColor: COLORS.white,
     borderRadius: SIZES.padding2 * 1.4,
-    marginRight: SIZES.padding2,
+    // marginRight: SIZES.padding2,
+    marginLeft:SIZES.padding2
   },
   image_view: {
     backgroundColor: COLORS.light_gray,
@@ -38,8 +39,9 @@ const styles = StyleSheet.create({
     marginTop: SIZES.padding2 * 0.4,
   },
   title: {
-    ...FONTS.Regular12,
+    ...FONTS.Regular11,
     alignSelf: 'center',
+    textAlign:'center',
     color: COLORS.primary
   },
 });

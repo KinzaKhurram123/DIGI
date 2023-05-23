@@ -14,8 +14,14 @@ export const styles = StyleSheet.create({
   },
   otc_view: {
     ...FONTS.Bold16,
+    color:COLORS.primary
   },
   prescription_medicine_view: {
     ...FONTS.Bold16,
+    color:COLORS.primary
+  },
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
   },
 });

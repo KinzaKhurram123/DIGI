@@ -4,7 +4,7 @@ import { SIZES } from "../Constant";
 export const styles = StyleSheet.create({
   slide: {
     alignItems: "center",
-    height: 180,
+    height: 170,
     width: "100%",
     alignSelf: "center",
   },

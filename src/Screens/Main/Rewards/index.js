@@ -47,6 +47,7 @@ const Rewards = ({navigation}) => {
         isIcon={false}
         onPressIcon={() => navigation.goBack()}
         title={'Rewards'}
+        style={styles.view}
       />
       <View style={styles.main_view}>
         <Text style={styles.balance_text}>Your Balance</Text>

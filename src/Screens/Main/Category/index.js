@@ -6,20 +6,18 @@ import {
   ScrollView,
   Dimensions,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import React, {useRef, useState} from 'react';
 import {styles} from './index.style';
 import {CommonHeader, Icon, SingleCategoryView} from '../../../Components';
-import {
-  filter_icon_primary,
-  small_down_arrow_icon,
-} from '../../../assets/icons';
-import {COLORS, images, SIZES} from '../../../Components/Constant';
+import {COLORS, FONTS, images, SIZES} from '../../../Components/Constant';
 import {FlatList} from 'react-native-gesture-handler';
-import {Image} from 'react-native-svg';
-import SingleCardImageView from '../../../Components/ImageView/SingleImageCardView';
 import SIngleProductView from './component/SIngleProductView';
-import DropDownPicker from 'react-native-dropdown-picker';
+import {down_black_arrow_icon , filter_icon_primary,} from '../../../assets/icons';
+import Default from './component/Default';
+import RBSheet from 'react-native-raw-bottom-sheet';
+import Card from './component/Card';
 
 const categories_type = [
   {
@@ -78,21 +76,23 @@ const product_list = [
     price: '500',
   },
 ];
+const Array = [
+  {id: 1, label: 'Price:', value: 'High to low'},
+  {id: 2, label: 'price:', value: 'Low to High'},
+  {id: 3, label: 'Alphabatically:', value: '(A-Z)'},
+];
 const Category = ({navigation}) => {
   const listRef = useRef();
   const [btnType, setBtnType] = useState('General');
   const [showDesc, setShowDesc] = useState(null);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
-  const [items, setItems] = useState([
-    {label: 'Price:', value: 'High to low'},
-    {label: 'price:', value: 'Low to High'},
-    {label: 'Alphabatically:', value: '(A-Z)'},
-  ]);
-
+  const [showarray, setShowarray] = useState(true);
+  const sheet_ref = useRef(null);
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
+        style={styles.view}
         title={'Category'}
         isDrawer={true}
         onPressIcon={() => navigation.openDrawer()}
@@ -106,6 +106,7 @@ const Category = ({navigation}) => {
               flexDirection: 'row',
               justifyContent: 'space-between',
               alignItems: 'center',
+              marginLeft: SIZES.padding,
             }}>
             <Icon name={filter_icon_primary} />
             <TouchableOpacity onPress={() => navigation.navigate('Filter')}>
@@ -115,30 +116,30 @@ const Category = ({navigation}) => {
             </TouchableOpacity>
           </View>
           <Text style={styles.filter_text}>Sort by</Text>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              backgroundColor: COLORS.light_gray2,
-              padding: SIZES.padding2,
-              borderRadius: SIZES.padding * 2,
-            }}>
-            <Text style={styles.filter_text}>Default Order</Text>
-            <Icon
-              style={{
-                marginLeft: SIZES.padding2,
-              }}
-              name={small_down_arrow_icon}
+          <View style={{flexDirection: 'column', justifyContent: 'flex-end'}}>
+            <Default
+              textStyle={styles.filter_text}
+              tittle="Default Order"
+              icon={down_black_arrow_icon}
+              iconStyle={{marginLeft: SIZES.padding2}}
+              onPress={() => setShowarray(!showarray)}
             />
+
+            {showarray &&
+              Array?.map(item => (
+                <Default
+                  style={styles.filter_view}
+                  key={item?.id}
+                  textStyle={{
+                    ...FONTS.Regular11,
+                    alignItems: 'center',
+                    color: COLORS.primary,
+                  }}
+                  lable={item.label}
+                  tittle={item.value}
+                />
+              ))}
           </View>
-          {/* <DropDownPicker
-             open={open}
-           value={value}
-            items={items}
-            setOpen={setOpen}
-            setValue={setValue}
-            setItems={setItems}
-          /> */}
         </View>
         <View style={styles.tab_row}>
           <ScrollView showsHorizontalScrollIndicator={true} horizontal>
@@ -159,9 +160,7 @@ const Category = ({navigation}) => {
                   styles.tab_text,
                   {
                     color:
-                      btnType === 'Gernal'
-                        ? COLORS.primary
-                        : COLORS.text_placeholder,
+                      btnType === 'Gernal' ? COLORS.primary : COLORS.primary,
                   },
                 ]}>
                 PERSONAL CARE
@@ -181,10 +180,7 @@ const Category = ({navigation}) => {
                 style={[
                   styles.tab_text,
                   {
-                    color:
-                      btnType === 'OTC'
-                        ? COLORS.primary
-                        : COLORS.text_placeholder,
+                    color: btnType === 'OTC' ? COLORS.primary : COLORS.primary,
                   },
                 ]}>
                 OTC & HEALTH NEED
@@ -205,9 +201,7 @@ const Category = ({navigation}) => {
                   styles.tab_text,
                   {
                     color:
-                      btnType === 'Order'
-                        ? COLORS.primary
-                        : COLORS.text_placeholder,
+                      btnType === 'Order' ? COLORS.primary : COLORS.primary,
                   },
                 ]}>
                 BABY & MOTHER CARE
@@ -232,7 +226,7 @@ const Category = ({navigation}) => {
                     color:
                       btnType === 'supplements'
                         ? COLORS.primary
-                        : COLORS.text_placeholder,
+                        : COLORS.primary,
                   },
                 ]}>
                 NUTRATION SUPLEMENTS
@@ -241,50 +235,64 @@ const Category = ({navigation}) => {
           </ScrollView>
         </View>
         <View style={{padding: SIZES.padding * 0.7}} />
-
-        <FlatList
-          horizontal
-          data={categories_type}
-          ref={listRef}
-          getItemLayout={(data, index) => ({
-            length: Dimensions.get('screen').width / 3.4,
-            offset: (Dimensions.get('screen').width / 3.4) * index,
-            index,
-          })}
-          onScrollToIndexFailed={() => {}}
-          showsHorizontalScrollIndicator={false}
-          style={{paddingHorizontal: SIZES.padding * 2}}
-          ListFooterComponent={<View style={{width: SIZES.padding2}} />}
-          renderItem={({item}) => {
-            return (
-              <SingleCategoryView
-                style={styles.margin}
-                image={item.image}
-                name={item.title}
-              />
-            );
-          }}
-        />
-        <FlatList
-          data={product_list}
-          columnWrapperStyle={{justifyContent: 'center'}}
-          numColumns={2}
-          style={{paddingHorizontal: SIZES.padding}}
-          keyExtractor={item => item?.id}
-          ListFooterComponent={<View style={{height: SIZES.padding * 1.5}} />}
-          renderItem={({item}) => {
-            return (
-              <SIngleProductView
-                image2={item.imagePro}
-                name={item.name}
-                // navigate={() => navigation.navigate('ViewProduct')}
-                price={item.price}
-                keyExtractor={item => item?.id}
-                onPress={() => navigation.navigate('ViewProduct')}
-              />
-            );
-          }}
-        />
+        <ScrollView>
+          <FlatList
+            horizontal
+            data={categories_type}
+            ref={listRef}
+            getItemLayout={(data, index) => ({
+              length: Dimensions.get('screen').width / 3.4,
+              offset: (Dimensions.get('screen').width / 3.4) * index,
+              index,
+            })}
+            onScrollToIndexFailed={() => {}}
+            showsHorizontalScrollIndicator={false}
+            style={{paddingHorizontal: SIZES.padding * 0.5}}
+            ListFooterComponent={<View style={{width: SIZES.padding2}} />}
+            renderItem={({item}) => {
+              return (
+                <SingleCategoryView
+                  style={styles.margin}
+                  image={item.image}
+                  name={item.title}
+                />
+              );
+            }}
+          />
+          <FlatList
+            data={product_list}
+            columnWrapperStyle={{justifyContent: 'center'}}
+            numColumns={2}
+            style={{paddingHorizontal: SIZES.padding * 0.2}}
+            keyExtractor={item => item?.id}
+            ListFooterComponent={<View style={{height: SIZES.padding * 1.5}} />}
+            renderItem={({item}) => {
+              return (
+                <SIngleProductView
+                  image2={item.imagePro}
+                  name={item.name}
+                  price={item.price}
+                  keyExtractor={item => item?.id}
+                  onPress={() => sheet_ref.current.open()}
+                />
+              );
+            }}
+          />
+        </ScrollView>
+        <RBSheet
+          ref={sheet_ref}
+          height={600}
+          openDuration={250}
+          customStyles={{
+            container: {
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderTopLeftRadius: SIZES.padding,
+              borderTopRightRadius: SIZES.padding,
+            },
+          }}>
+          <Card onPress={() => console.log('called')} />
+        </RBSheet>
       </View>
     </SafeAreaView>
   );

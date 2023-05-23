@@ -8,7 +8,7 @@ import {
 import React, {useState} from 'react';
 import {styles} from './index.style';
 import {CommonHeader} from '../../../Components';
-import {FONTS, SIZES} from '../../../Components/Constant';
+import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
 import {ScrollView} from 'react-native-gesture-handler';
 import LineTittle from '../../../Components/LineTittle';
 import { down_black_arrow_icon } from '../../../assets/icons';
@@ -48,7 +48,7 @@ const Medician_systemic = ({navigation}) => {
       <CommonHeader
         title={'Medician By \nSystemic Class'}
         titleStyle={{marginTop: SIZES.padding}}
-        style={{paddingTop: SIZES.padding * 1.5}}
+        style={styles.view}
         onPressIcon={() => navigation.goBack()}
       />
       <View style={styles.main_view}>
@@ -57,7 +57,7 @@ const Medician_systemic = ({navigation}) => {
           <TouchableOpacity onPress={() => setShowOtcOptions(!showOtcOptions)}>
             <LineTittle
               textStyle={styles.otc_view}
-              tittle='Otc'
+              tittle='OTC'
               icon={down_black_arrow_icon}
             />
           </TouchableOpacity>
@@ -65,7 +65,7 @@ const Medician_systemic = ({navigation}) => {
             medicine_by_systemic_class?.map(item => (
               <LineTittle
                 key={item?.id}
-                textStyle={{...FONTS.Regular15}}
+                textStyle={{...FONTS.Regular11 , color:COLORS.primary}}
                 tittle={item.title}
               />
             ))}

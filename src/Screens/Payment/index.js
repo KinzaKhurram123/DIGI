@@ -16,7 +16,7 @@ const Payment = ({navigation}) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <SafeAreaView style={styles.safe_area}>
-      <CommonHeader onPressIcon={() => navigation.goBack()} title={'Payment'} isprofile={false}/>
+      <CommonHeader style={styles.vi} onPressIcon={() => navigation.goBack()} title={'Payment'} isprofile={false}/>
       <ScrollView style={styles.main_view} showsVerticalScrollIndicator={false}>
         <View style={styles.address_parent_view}>
           <Text style={styles.title}>Billing Address</Text>

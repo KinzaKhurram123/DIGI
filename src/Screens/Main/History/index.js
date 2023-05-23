@@ -16,6 +16,7 @@ const History = ({navigation}) => {
       <CommonHeader
         title={'History'}
         isDrawer={false}
+        style={styles.view}
         onpresscart={() => navigation.navigate('MyCart')}
         onPressIcon={() => navigation.goBack()}
         isprofile={false}

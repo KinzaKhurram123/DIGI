@@ -19,6 +19,7 @@ const SelectLOcation = ({navigation}) => {
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader
+      style={styles.view}
         onPressIcon={() => navigation.goBack()}
         title={'Select Location'}
         isIcon={false}

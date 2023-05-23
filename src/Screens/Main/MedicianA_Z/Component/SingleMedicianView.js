@@ -52,10 +52,13 @@ export default SingleMedicianView;
 const styles = StyleSheet.create({
   main_view: {
     backgroundColor: COLORS.white,
-    width: '50%',
+    width: '45%',
+    marginRight: SIZES.padding2,
+    height:'100%',
+    marginBottom:SIZES.padding2,
     borderRadius: SIZES.padding2,
-    justifyContent: 'space-between',
     elevation: 2,
+    
   },
   image_view: {
     height: SIZES.padding * 8,

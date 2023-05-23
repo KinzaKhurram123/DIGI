@@ -33,6 +33,7 @@ const CommonHeader = ({
   onPressCross,
   searchValue,
   edit,
+  search = true,
   onpressEdit,
   onpresscart = true,
 }) => {
@@ -83,7 +84,7 @@ const CommonHeader = ({
         <TouchableOpacity activeOpacity={1} onPress={onPressSearchBar} disabled={isSearchable}>
           <IconInputField
             rightIcon={close_black_icon}
-            icon={search_icon_blue}
+            icon={search}
             isEdit={isSearchable}
             value={searchValue}
             onPressRightIcon={onPressCross}

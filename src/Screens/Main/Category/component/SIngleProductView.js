@@ -5,6 +5,7 @@ import {Icon} from '../../../../Components';
 import {white_add_icon} from '../../../../assets/icons';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import CardView from '../../../../Components/ImageView/CardView';
+import Card from './Card';
 
 const SIngleProductView = ({
   image2,
@@ -19,35 +20,18 @@ const SIngleProductView = ({
       activeOpacity={1}
       onPress={onPress}
       style={styles.main_views}>
-      {/* <RBSheet ref={ref =>{
-          this.RBSheet = ref;
-        }}
-        height={400}
-        openDuration={250}
-        customStyles={{
-          container: {
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderTopLeftRadius: SIZES.padding,
-            borderTopRightRadius: SIZES.padding
-          },
-        }}
-        >
-        <CardView onPress={navigate}/>
-        </RBSheet> */}
+    
       <View style={styles.image_views}>
         <Image style={styles.imagecard} source={image2} />
       </View>
       <View style={{paddingHorizontal: SIZES.padding * 0.2}}>
         <Text style={styles.names}>{name}</Text>
-
-       
       </View>
-      <View style={{flexDirection:"row" , justifyContent:"space-between"}}>
-      <Text style={styles.price}>{'Rs' + price}</Text>
-      <TouchableOpacity onPress={onPressAdd} style={styles.add_views}>
-        <Icon name={white_add_icon} />
-      </TouchableOpacity>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <Text style={styles.price}>{'Rs' + price}</Text>
+        <TouchableOpacity onPress={onPressAdd} style={styles.add_views}>
+          <Icon name={white_add_icon} />
+        </TouchableOpacity>
       </View>
     </TouchableOpacity>
   );
@@ -90,7 +74,7 @@ const styles = StyleSheet.create({
   },
   names: {
     textAlign: 'left',
-    ...FONTS.Regular12,
+    ...FONTS.Light11,
     marginTop: SIZES.padding2 * 0.5,
     color: COLORS.primary,
   },
@@ -103,7 +87,7 @@ const styles = StyleSheet.create({
     width: 25,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: SIZES.padding2 *0,
+    marginTop: SIZES.padding2 * 0,
     marginRight: SIZES.padding,
     borderRadius: SIZES.padding,
     alignSelf: 'flex-end',
@@ -144,12 +128,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: SIZES.padding2 * 0.8,
   },
-  name: {
-    textAlign: 'left',
-    ...FONTS.Regular14,
-    marginTop: SIZES.padding2 * 0.5,
-    color: COLORS.primary,
-  },
   icon_view: {
     alignItems: 'flex-end',
   },
@@ -166,6 +144,6 @@ const styles = StyleSheet.create({
   },
   add_text: {
     color: COLORS.white,
-    ...FONTS.Regular24,
+    ...FONTS.Regular22,
   },
 });

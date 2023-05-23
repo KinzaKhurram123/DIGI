@@ -19,6 +19,7 @@ const Buttons = ({
   return (
     <TouchableOpacity
       onPress={onPress}
+      activeOpacity={1}
       style={[styles.container, style]}
       disabled={isDisabled}>
   {ismodle && (

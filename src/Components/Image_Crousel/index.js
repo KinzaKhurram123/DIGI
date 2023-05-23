@@ -30,7 +30,7 @@ const Image_Crousel = ({array}) => {
         onSnapToItem={index => setIndex(index)}
         autoplay
       />
-      <Pagination
+      {/* <Pagination
         containerStyle={{marginBottom: -50}}
         dotContainerStyle={styles.dot_view}
         dotsLength={array?.length}
@@ -39,7 +39,7 @@ const Image_Crousel = ({array}) => {
         inactiveDotColor={COLORS.white}
         dotColor={COLORS.black}
         inactiveDotStyle={styles.inactive_dot}
-      />
+      /> */}
     </View>
   );
 };

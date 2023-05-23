@@ -11,8 +11,10 @@ export const styles = StyleSheet.create({
     paddingHorizontal: SIZES.padding,
     paddingTop: SIZES.padding2,
   },
-
-  coupon_view: {
+  view: {
+    borderBottomEndRadius: SIZES.padding,
+    borderBottomStartRadius: SIZES.padding,
+  },  coupon_view: {
     flexDirection: "row",
     alignItems: "center",
     marginTop: SIZES.padding * 3,

@@ -14,6 +14,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingTop: SIZES.padding,
   },
+  // view: {
+  //   borderBottomEndRadius: SIZES.padding,
+  //   borderBottomStartRadius: SIZES.padding,
+  // },
   profile: {
     justifyContent: 'center',
     padding: SIZES.padding,
@@ -42,12 +46,7 @@ export const styles = StyleSheet.create({
   view: {
     flexDirection: 'row',
     paddingVertical:SIZES.padding,
-    // padding: 10,
-    // paddingHorizontal: SIZES.padding * 1.5,
-    //  padding:SIZES.padding2*2.5,
-    justifyContent: 'space-between',
-    //  paddingEnd:SIZES.padding*2.5,
-    //  paddingStart:SIZES.padding*3
+    justifyContent: 'space-between'
   },
   btn: {
     marginTop: SIZES.padding * 3,

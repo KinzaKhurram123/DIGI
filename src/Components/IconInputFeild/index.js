@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.padding * 2,
   },
   icon: {
-    width: '7%',
+    width: '8%',
   },
   input: {
     flex: 1,

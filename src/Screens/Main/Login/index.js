@@ -47,8 +47,6 @@ export default function Login({navigation}) {
                   // value={values.number}
                   maxLength={10}
                   keyboardType="numeric"
-                  // leftIcon={}
-        
                 />
               </View>
               <View style={{height: 50}} />

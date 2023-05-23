@@ -47,20 +47,6 @@ const A_Z = [
         price: '500',
         image: images.lab_test_image,
       },
-      {
-        id: 23,
-        title: 'Covid 19 Vaccine',
-        description: 'Pfizer',
-        price: '500',
-        image: images.medicine,
-      },
-      {
-        id: 24,
-        title: 'Covid 19 Vaccine',
-        description: 'Pfizer',
-        price: '500',
-        image: images.lab_test_image,
-      },
     ],
   },
   {
@@ -93,6 +79,7 @@ export default function MedicianA_Z({navigation}) {
         onpresscart={() => navigation.navigate('MyCart')}
         onPressIcon={() => navigation.navigate('Main')}
         isprofile={false}
+        style={styles.view}
       />
       <View style={styles.main_view}>
         <IconInputField
@@ -101,7 +88,7 @@ export default function MedicianA_Z({navigation}) {
           placeholder="Search for Medician"
         />
         <FlatList
-          style={{marginTop: SIZES.padding}}
+          style={{marginTop: SIZES.padding *2}}
           data={A_Z}
           showsVerticalScrollIndicator={false}
           ListFooterComponent={
@@ -116,7 +103,7 @@ export default function MedicianA_Z({navigation}) {
                     alignItems: 'flex-start',
                     marginVertical: SIZES.padding,
                   }}>
-                  <View style={{width: SIZES.padding2}}/>
+                  <View style={{width: SIZES.padding *0.5}}/>
                     <FlatList
                       data={item?.array}
                       numColumns={2}

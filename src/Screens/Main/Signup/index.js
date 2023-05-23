@@ -105,29 +105,33 @@ export default function Signup({navigation}) {
                 />
               </View>
               <View style={{height: 40}} />
-              <View style={styles.container}>
-                <View style={styles.checkboxContainer}>
-                  {/* <CustomCheckBox
+                  <CustomCheckBox
                     style={styles.check_box}
                     isChecked={isCheck}
                     setIsChecked={() => setIsCheck(!isCheck)}
                     checkedColor={COLORS.secondary}
                     uncheckedBorderColor={COLORS.secondary}
                     unCheckedColor={'#F3F5F7'}
-                  /> */}
-                  <View style={{padding: 1}}>
-                    <Text>
-                      <Text style={styles.label}>
-                        By Signing up you agree to our
-                        {'\n'}
-                      </Text>
-                      <Text style={{color: COLORS.secondary}}>
-                        Privacy Policy & Terms & Conditions
-                      </Text>
-                    </Text>
-                  </View>
-                </View>
-              </View>
+                    right_text_view={
+                      <View style={styles.privacy_view}>
+                        <Text style={styles.privacy_text}>
+                          By Signing Up you agree to our
+                        </Text>
+                        <TouchableOpacity>
+                          <Text style={styles.privacy_link_text}>
+                            Privacy Policy
+                          </Text>
+                        </TouchableOpacity>
+                        <Text style={styles.privacy_text}>& </Text>
+                        <TouchableOpacity>
+                          <Text style={styles.privacy_link_text}>
+                            Terms & Conditions
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
+                    }
+                  />
+            
               <Buttons
                 onPress={() => navigation.navigate('Conformation')}
                 buttonText={'Signup'}
