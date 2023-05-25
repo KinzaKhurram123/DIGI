@@ -4,7 +4,8 @@ import {COLORS, FONTS, SIZES} from '../../../../Components/Constant';
 import {Icon} from '../../../../Components';
 const Default = ({lable, tittle, icon,onPress, iconStyle}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.main_view}>
+    <View>
+    <TouchableOpacity activeOpacity={1} onPress={onPress} style={styles.main_view}>
       <View style={{flexDirection: 'row'}}>
         <Text style={styles.title}>{lable}</Text>
         <Text style={styles.title}>{tittle}</Text>
@@ -13,14 +14,13 @@ const Default = ({lable, tittle, icon,onPress, iconStyle}) => {
         {icon && <Icon style={[styles.icon, iconStyle]} name={icon} />}
       </View>
     </TouchableOpacity>
+    </View>
   );
 };
 export default Default;
 const styles = StyleSheet.create({
   main_view: {
     flexDirection: 'row',
-    height: 50,
-    width: 200,
     alignItems: 'center',
     paddingVertical: SIZES.padding2,
     borderBottomColor: COLORS.white,

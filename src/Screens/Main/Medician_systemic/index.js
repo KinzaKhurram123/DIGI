@@ -4,12 +4,12 @@ import {
   Text,
   TouchableOpacity,
   View,
+  ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
 import {styles} from './index.style';
 import {CommonHeader} from '../../../Components';
 import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
-import {ScrollView} from 'react-native-gesture-handler';
 import LineTittle from '../../../Components/LineTittle';
 import { down_black_arrow_icon } from '../../../assets/icons';
 const medicine_by_systemic_class = [
@@ -38,7 +38,6 @@ const medicine_by_systemic_class = [
       title: "item Six",
     },
   ];
-  
 const Medician_systemic = ({navigation}) => {
   const [showOtcOptions, setShowOtcOptions] = useState(true);
   const [showPreMedicineOptions, setShowPreMedicineOptions] = useState(true);

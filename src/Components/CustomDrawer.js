@@ -28,11 +28,11 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'About',
-      goto: () => props.navigation.navigate('About'),
+      goto: () => props.navigation.navigate(null),
     },
     {
       title: 'Our Store',
-      goto: () => navigation.navigate('BrandScreen'),
+      goto: () => props.navigation.navigate(null),
     },
     {
       title: 'Profile',
@@ -40,7 +40,7 @@ const CustomDrawer = ({navigation}) => {
     },
     {
       title: 'Carees',
-      goto: () => props.navigation.navigate('cares'),
+      goto: () => props.navigation.navigate(null),
     },
     {
       title: 'Blog',

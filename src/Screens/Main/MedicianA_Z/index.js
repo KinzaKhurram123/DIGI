@@ -1,12 +1,9 @@
-import {View, Text, Dimensions} from 'react-native';
+import {View, Text, Dimensions ,FlatList,SafeAreaView} from 'react-native';
 import React from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {styles} from './index.style';
 import {CommonHeader, IconInputField} from '../../../Components';
 import {images, SIZES} from '../../../Components/Constant';
 import {search_icon_gray} from '../../../assets/icons';
-import {FlatList} from 'react-native-gesture-handler';
-import Signup from '../Signup';
 import SingleMedicianView from './Component/SingleMedicianView';
 const A_Z = [
   {

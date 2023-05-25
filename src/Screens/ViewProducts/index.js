@@ -1,11 +1,10 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView,ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {CommonHeader} from '../../Components';
 import {styles} from './index.style';
 import {images, SIZES} from '../../Components/Constant';
 import SingleCardImageView from '../../Components/ImageView/SingleImageCardView';
 import Buttons from '../../Components/Buttons/buttons';
-import {ScrollView} from 'react-native-gesture-handler';
 
 const ViewProduct = ({navigation}) => {
   return (

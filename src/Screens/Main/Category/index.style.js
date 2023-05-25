@@ -62,6 +62,7 @@ export const styles = StyleSheet.create({
   },
   tab_row: {
     flexDirection: 'row',
+    marginLeft: SIZES.padding,
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: SIZES.padding2,

@@ -1,4 +1,4 @@
-import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, ScrollView,TouchableOpacity, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {styles} from './index.style';
 import {CommonHeader, Icon, IconInputField} from '../../Components';
@@ -7,7 +7,6 @@ import {
   payment_method_icon,
   primary_location_icon,
 } from '../../assets/icons';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import {COLORS, SIZES} from '../../Components/Constant';
 import Buttons from '../../Components/Buttons/buttons';
 

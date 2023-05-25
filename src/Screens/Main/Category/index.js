@@ -39,14 +39,15 @@ const categories_type = [
 const product_list = [
   {
     id: 1,
-    imagePro: images.product_1,
-    name: 'CLEAN & CLEAR CLEANSER 100GM ACTIVE CLEAR',
+    imagePro: images.product_2,
+    name: 'CLEAN&CLEAR FACE WASH 100ML',
     price: '500',
   },
   {
     id: 2,
-    imagePro: images.product_2,
-    name: 'CLEAN&CLEAR FACE WASH 100ML',
+    imagePro: images.product_1,
+    name: 'CLEAN & CLEAR CLEANSER 100GM ACTIVE CLEAR',  
+    
     price: '500',
   },
   {
@@ -291,7 +292,7 @@ const Category = ({navigation}) => {
               borderTopRightRadius: SIZES.padding,
             },
           }}>
-          <Card onPress={() => console.log('called')} />
+          <Card onPress={() => navigation.navigate('ViewProduct')} />
         </RBSheet>
       </View>
     </SafeAreaView>

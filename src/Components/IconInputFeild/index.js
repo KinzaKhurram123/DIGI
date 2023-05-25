@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, TextInput, TouchableOpacity, View} from 'react-native';
 import {Icon, Icons} from '../index';
 import {COLORS, FONTS, SIZES} from '../Constant';
+import { search_icon_blue, top_right_icon } from '../../assets/icons';
 
 const IconInputField = ({
   style,
@@ -21,12 +22,19 @@ const IconInputField = ({
   iconStyle,
   maxLength,
   onPressleftIcon,
+  rightIcon,
+  onPressrightIcon
 }) => {
   return (
     <View style={[styles.main_view, style]}>
       {leftIcon && (
         <TouchableOpacity onPress={onPressleftIcon}>
           <Icon name={leftIcon} style={[styles.icon, iconStyle]} />
+        </TouchableOpacity>
+      )}
+      {rightIcon && (
+        <TouchableOpacity onPress={onPressrightIcon}>
+          <Icon name={rightIcon} style={[styles.rightIcon, iconStyle]} />
         </TouchableOpacity>
       )}
       <TextInput
@@ -59,6 +67,10 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.padding * 2,
   },
   icon: {
+    width: '8%',
+    marginLeft:80
+  },
+  rightIcon:{
     width: '8%',
   },
   input: {

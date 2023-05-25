@@ -18,7 +18,7 @@ const CartView = () => {
         <View style={styles.card_view}>
           <View style={styles.card_left_view}>
             <SingleCardImageView
-              image={images.medicine}
+              image={images.Augmentin2}
               style={styles.card_image}
             />
             <View
@@ -57,7 +57,7 @@ const CartView = () => {
         <View style={styles.card_view}>
           <View style={styles.card_left_view}>
             <SingleCardImageView
-              image={images.product_2}
+              image={images.product_1}
               style={styles.card_image}
             />
             <View
@@ -124,6 +124,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  price_container:{
+    
+  },
+  
   card_left_view: {
     flexDirection: 'row',
     alignItems: 'flex-start',

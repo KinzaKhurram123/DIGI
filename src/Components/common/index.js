@@ -14,7 +14,6 @@ import {
 } from '../../assets/icons';
 import {images, SIZES} from '../Constant';
 const CommonHeader = ({
-  navigation,
   title,
   onPressIcon,
   isDrawer = false,
@@ -79,12 +78,15 @@ const CommonHeader = ({
           </>
         )}
       </View>
-
       {hasSearchBar && (
-        <TouchableOpacity activeOpacity={1} onPress={onPressSearchBar} disabled={isSearchable}>
+        <TouchableOpacity
+          activeOpacity={1}
+          onPress={onPressSearchBar}
+          disabled={isSearchable}>
           <IconInputField
-            rightIcon={close_black_icon}
+            rightIcon={search_icon_blue}
             icon={search}
+            // leftIcon={close_black_icon}
             isEdit={isSearchable}
             value={searchValue}
             onPressRightIcon={onPressCross}

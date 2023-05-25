@@ -7,7 +7,7 @@ const SingleImageCategoryVeiw = ({onPress,name, style, image}) => {
   return (
     <TouchableOpacity activeOpacity={1}  onPress={onPress} style={[styles.main_view, style]}>
       <View style={styles.image_view}>
-        <Image source={image} style={{width:"70%" , height: "70%"}} />
+        <Image source={image} style={{width:"80%" , height: "80%", borderRadius:20}} />
       </View>
       <View style={styles.text_view}>
         <Text style={styles.title}>{name}</Text>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginTop: SIZES.padding2 * 0.4,
   },
   title: {
-    ...FONTS.Regular11,
+    ...FONTS.Regular12,
     alignSelf: 'center',
     textAlign:'center',
     color: COLORS.primary

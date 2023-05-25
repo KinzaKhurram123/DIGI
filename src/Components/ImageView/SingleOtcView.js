@@ -1,6 +1,6 @@
 import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import React from 'react';
-import {COLORS, SIZES} from '../Constant';
+import {COLORS, FONTS, SIZES} from '../Constant';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import CardView from './CardView';
 
@@ -58,8 +58,11 @@ const styles = StyleSheet.create({
   name: {
     textAlign: 'left',
     marginTop: SIZES.padding2,
+    ...FONTS.Bold14,
+    color:COLORS.primary
   },
   price: {
+    ...FONTS.Regular12,
     color: COLORS.secondary,
   },
 });

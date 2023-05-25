@@ -40,7 +40,7 @@ export const styles = StyleSheet.create({
   },
   card_image_view: {
     width: '100%',
-    height: 180,
+    height: 200,
     // marginTop: SIZES.padding * 2,
     borderRadius: 0,
   },

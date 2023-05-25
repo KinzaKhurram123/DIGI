@@ -26,11 +26,11 @@ const History = ({navigation}) => {
           <IconInputField
             value={name}
             placeholder="Name"
-            rightIcon={edit_icon}
+            // rightIcon={edit_icon}
             onChangeText={text => setName(text)}
           />
           <IconInputField
-            rightIcon={edit_icon}
+            // rightIcon={edit_icon}
             value={address}
             onChangeText={text => setAddress(text)}
             placeholder="Address"
@@ -57,7 +57,6 @@ const History = ({navigation}) => {
             order_date={'28th Mar 22'}
             eta={'03rd Apr 22'}
             btntext={'Re order'}
-
             quantity={'100'}
           />
           <SingleOrderView
@@ -73,7 +72,6 @@ const History = ({navigation}) => {
             eta={'03rd Apr 22'}
             quantity={'100'}
           />
-
           <Buttons buttonText={'New Order'} style={styles.btn} />
           <View style={{height: SIZES.padding}} />
         </ScrollView>

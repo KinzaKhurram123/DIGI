@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: SIZES.padding,
-    width: '60%',
+    width: '80%',
     paddingHorizontal: SIZES.padding,
   },
   tab_view: {

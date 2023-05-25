@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity,SafeAreaView, Button,ScrollView} from 'react-native';
 import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import BackButton from '../../../Components/MainHeader/index.js.js';
 import Container from '../../../Components/Container/Container';
@@ -13,12 +13,10 @@ import {
   isLastFilledCell,
 } from 'react-native-confirmation-code-field';
 import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
-import {ScrollView} from 'react-native-gesture-handler';
 import {back_arrow_icon, views_icon} from '../../../assets/icons';
 import Buttons from '../../../Components/Buttons/buttons';
 import {CommonHeader, Icon} from '../../../Components';
 import CustomCheckBox from '../../../Components/CustomCheckBox.js';
-import {SafeAreaView} from 'react-native-safe-area-context';
 const CELL_COUNT = 4;
 
 export default function Otp({navigation}) {
@@ -28,28 +26,6 @@ export default function Otp({navigation}) {
     value,
     setValue,
   });
-  // const renderCell = ({index, symbol, isFocused}) => {
-  //   let textChild = null;
-  //   if (symbol) {
-  //     textChild = (
-  //       <MaskSymbol
-  //         maskSymbol="-"
-  //         isLastFilledCell={isLastFilledCell({index, value})}>
-  //         {symbol}
-  //       </MaskSymbol>
-  //     );
-  //   } else if (isFocused) {
-  //     textChild = <Cursor />;
-  //   }
-  //   return (
-  //     <Text
-  //       key={index}
-  //       style={[styles.cell, isFocused && styles.focusCell]}
-  //       onLayout={getCellOnLayoutHandler(index)}>
-  //       {textChild}
-  //     </Text>
-  //   );
-  // };
   return (
     <SafeAreaView style={styles.safe_area}>
       <CommonHeader isIcon={false} onPressIcon={() => navigation.goBack()} />

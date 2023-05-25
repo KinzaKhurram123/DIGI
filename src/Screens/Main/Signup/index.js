@@ -10,8 +10,6 @@ import {
 import Container from '../../../Components/Container/Container';
 import InputField from '../../../Components/Inputs/InputField';
 import InnerContainer from '../../../Components/Container/InnerContainer';
-import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
-import CommonStyles from '../../../Utils/CommonStyles';
 import Buttons from '../../../Components/Buttons/buttons';
 import {COLORS, FONTS, SIZES} from '../../../Components/Constant';
 import {Icon, Header, CommonHeader} from '../../../Components';
@@ -31,15 +29,6 @@ export default function Signup({navigation}) {
 
   return (
     <Container>
-      {/* <View style={styles.blueback}>
-        <TouchableOpacity
-          style={{alignContent: 'space-between', padding: 12}}
-          onPress={() => navigation.navigate('Start')}>
-          <Icon name={back_arrow_icon} />
-        </TouchableOpacity>
-
-        <Text style={CommonStyles.title}>Signup</Text>
-      </View> */}
       <CommonHeader
         onPresRightIcon={() => navigation.goBack()}
         title={'Signup'}
@@ -73,8 +62,8 @@ export default function Signup({navigation}) {
                 <Icon name={discount_icon} />
               </View>
               <View style={styles.text_view}>
-                <Text style={styles.text}>Easy</Text>
-                <Text style={styles.text_red}>Return</Text>
+                <Text style={styles.text_red}>Easy</Text>
+                <Text style={styles.text}>Return</Text>
               </View>
             </View>
           </View>
@@ -117,7 +106,7 @@ export default function Signup({navigation}) {
                         <Text style={styles.privacy_text}>
                           By Signing Up you agree to our
                         </Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity> 
                           <Text style={styles.privacy_link_text}>
                             Privacy Policy
                           </Text>
@@ -193,8 +182,8 @@ const styles = StyleSheet.create({
   privacy_view: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    alignItems:'center',
+    justifyContent: 'center',
     marginTop: SIZES.padding,
     marginLeft: SIZES.padding2,
   },
@@ -263,13 +252,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
+
   },
   text: {
-    ...FONTS.Regular13,
+    ...FONTS.Regular14,
     color: COLORS.primary,
   },
   text_red: {
-    ...FONTS.Bold13,
+    ...FONTS.Bold14,
     color: COLORS.secondary,
   },
   phone_code: {width: '25%', borderRadius: 0},
